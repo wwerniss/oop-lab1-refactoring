@@ -1,0 +1,17 @@
+@startuml
+title State: Trip lifecycle
+
+[*] --> Planned
+Planned --> Booked : transport+accommodation booked
+Booked --> Prepared : documents+packing ready
+Prepared --> Traveling : departure
+Traveling --> AtDestination : arrival
+AtDestination --> Traveling : day trips / transfers
+AtDestination --> Completed : return home
+Traveling --> Completed : arrived home
+Completed --> [*]
+
+Booked --> Canceled : cancel booking
+Planned --> Canceled : cancel idea
+Canceled --> [*]
+@enduml

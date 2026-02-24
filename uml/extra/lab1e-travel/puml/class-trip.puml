@@ -1,0 +1,48 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide empty members
+
+class Trip {
+  +destination: string
+  +startDate: date
+  +endDate: date
+  +status: enum
+}
+
+class Itinerary {
+  +days: int
+}
+
+class ActivityItem {
+  +title: string
+  +time: time
+  +location: string
+}
+
+class Budget {
+  +planned: money
+  +spent: money
+}
+
+class Reservation {
+  +id: string
+  +status: enum
+}
+
+abstract class Booking {
+  +provider: string
+  +price: money
+}
+
+class TransportBooking
+class AccommodationBooking
+
+Trip "1" *-- "1" Itinerary
+Itinerary "1" *-- "0..*" ActivityItem
+Trip "1" *-- "1" Budget
+Trip "1" o-- "0..*" Reservation
+Reservation "1" o-- "1" Booking
+
+Booking <|-- TransportBooking
+Booking <|-- AccommodationBooking
+@enduml

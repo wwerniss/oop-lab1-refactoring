@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+actor User as U
+participant "Mobile App" as App
+participant "Auth Service" as Auth
+participant "Post Service" as PostSvc
+participant "Media Storage/CDN" as CDN
+participant "Feed Service" as Feed
+participant "Notification Service" as Notif
+
+U -> App : create post (caption + media)
+App -> Auth : verify token
+Auth --> App : ok
+App -> CDN : upload media
+CDN --> App : mediaUrl
+App -> PostSvc : createPost(caption, mediaUrl)
+PostSvc --> App : postId
+PostSvc -> Feed : publish(postId)
+Feed --> PostSvc : ok
+
+U -> App : like post
+App -> PostSvc : like(postId)
+PostSvc -> Notif : notify(author, "like")
+Notif --> PostSvc : ok
+
+U -> App : comment post
+App -> PostSvc : addComment(postId, text)
+PostSvc -> Notif : notify(author, "comment")
+Notif --> PostSvc : ok
+@enduml

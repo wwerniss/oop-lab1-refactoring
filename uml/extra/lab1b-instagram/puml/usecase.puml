@@ -1,0 +1,41 @@
+@startuml
+left to right direction
+actor "User" as U
+actor "Moderator" as M
+
+rectangle "Instagram" {
+  usecase "Sign up / Log in" as UC1
+  usecase "Edit profile" as UC2
+  usecase "Follow / Unfollow" as UC3
+  usecase "View feed" as UC4
+  usecase "Create post" as UC5
+  usecase "Like post" as UC6
+  usecase "Comment on post" as UC7
+  usecase "Save post" as UC8
+  usecase "Send DM / Share" as UC9
+  usecase "Search users/hashtags" as UC10
+  usecase "View notifications" as UC11
+  usecase "Report content" as UC12
+  usecase "Moderate reports" as UC13
+  usecase "Remove content / Ban user" as UC14
+}
+
+U --> UC1
+U --> UC2
+U --> UC3
+U --> UC4
+U --> UC5
+U --> UC6
+U --> UC7
+U --> UC8
+U --> UC9
+U --> UC10
+U --> UC11
+U --> UC12
+
+M --> UC13
+M --> UC14
+UC12 --> UC13 : triggers
+UC13 --> UC14 : may result
+
+@enduml

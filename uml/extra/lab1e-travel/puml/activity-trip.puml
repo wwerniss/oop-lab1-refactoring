@@ -1,0 +1,36 @@
+@startuml
+title Activity: Trip
+
+start
+:Choose destination;
+:Set dates;
+:Estimate budget;
+
+repeat
+  :Search transport options;
+  :Search accommodation options;
+  if (Options ok?) then (yes)
+  else (no)
+    :Adjust dates/budget;
+  endif
+repeat while (Options ok?) is (no)
+
+:Book transport;
+:Book accommodation;
+
+:Prepare documents;
+:Make packing list;
+:Pack luggage;
+:Travel to destination;
+
+while (Trip ongoing?) is (yes)
+  :Follow itinerary (sightseeing/meetings);
+  if (Emergency?) then (yes)
+    :Contact support / rebook;
+  endif
+endwhile (no)
+
+:Return home;
+:Collect receipts and review expenses;
+stop
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+title Activity: Refresh Feed
+
+start
+:User opens Feed;
+:App requests feed items;
+if (Authenticated?) then (yes)
+  :Fetch following list;
+  :Fetch posts for following;
+  :Rank posts (time + engagement);
+  :Return feed items;
+else (no)
+  :Show login screen;
+endif
+stop
+@enduml

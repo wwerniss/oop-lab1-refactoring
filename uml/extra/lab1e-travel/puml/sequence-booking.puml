@@ -1,0 +1,24 @@
+@startuml
+hide footbox
+actor Traveler as T
+participant "Booking App" as App
+participant "Transport Provider" as TP
+participant "Hotel Provider" as HP
+participant "Payment System" as Pay
+participant "Notification Service" as Notif
+
+T -> App : choose dates & destination
+T -> App : book transport
+App -> TP : reserve seats
+TP --> App : reservationId
+App -> Pay : pay(transport)
+Pay --> App : success
+App -> Notif : send ticket
+
+T -> App : book accommodation
+App -> HP : reserve room
+HP --> App : bookingId
+App -> Pay : pay(hotel)
+Pay --> App : success
+App -> Notif : send confirmation
+@enduml

@@ -1,0 +1,94 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide empty members
+
+class User {
+  +userId: UUID
+  +username: string
+  +email: string
+  +isPrivate: bool
+}
+
+class Profile {
+  +displayName: string
+  +bio: string
+  +avatarUrl: string
+}
+
+class Post {
+  +postId: UUID
+  +caption: string
+  +createdAt: datetime
+  +mediaType: enum
+}
+
+class Media {
+  +mediaId: UUID
+  +url: string
+  +type: enum
+}
+
+class Comment {
+  +commentId: UUID
+  +text: string
+  +createdAt: datetime
+}
+
+class Like {
+  +createdAt: datetime
+}
+
+class Follow {
+  +createdAt: datetime
+}
+
+class Story {
+  +storyId: UUID
+  +expiresAt: datetime
+}
+
+class Reel {
+  +reelId: UUID
+  +createdAt: datetime
+}
+
+class Notification {
+  +notificationId: UUID
+  +type: enum
+  +createdAt: datetime
+  +isRead: bool
+}
+
+class Report {
+  +reportId: UUID
+  +reason: enum
+  +createdAt: datetime
+  +status: enum
+}
+
+class Hashtag {
+  +tag: string
+}
+
+User "1" *-- "1" Profile
+User "1" o-- "0..*" Post : creates
+Post "1" *-- "1..*" Media
+Post "1" o-- "0..*" Comment
+Post "1" o-- "0..*" Like
+
+User "1" o-- "0..*" Comment : writes
+User "1" o-- "0..*" Like : makes
+
+User "1" o-- "0..*" Follow : follower
+Follow "1" --> "1" User : followee
+
+User "1" o-- "0..*" Story : publishes
+User "1" o-- "0..*" Reel : publishes
+
+User "1" o-- "0..*" Notification : receives
+
+Report "1" --> "1" User : reporter
+Report "1" --> "1" Post : reportedPost (optional)
+
+Post "0..*" -- "0..*" Hashtag : tagged
+@enduml
