@@ -1,0 +1,39 @@
+@startuml
+actor PlayerUser as U
+participant Game as G
+participant WorldMap as W
+participant LocationNode as L
+participant Player as P
+participant Enemy as E
+participant Utils as X
+participant Logger as Log
+
+U -> G : start combat
+G -> W : getCurrentLocation()
+W --> G : L
+G -> L : hasEnemies()
+
+alt enemies exist
+  loop each combat turn
+    G -> X : getCharNonBlock()
+    alt player attacks
+      G -> P : attackTarget(E)
+      G -> Log : combatLog(...)
+      note right of P
+        If enemy dies:
+        P.gainExperience(...)
+        L.removeEnemy(...)
+      end note
+    else enemies attack
+      G -> E : attackTarget(P)
+      G -> Log : combatLog(...)
+      note right of E
+        If player dies:
+        G.showGameOver()
+      end note
+    end
+  end
+else no enemies
+  G -> Log : warning("No enemies here")
+end
+@enduml

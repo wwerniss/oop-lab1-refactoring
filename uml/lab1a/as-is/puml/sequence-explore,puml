@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+title Sequence: LocationNode::explore(Player&)
+
+participant LocationNode as L
+participant Player as P
+participant Logger as Log
+
+P -> L : explore(P)
+
+alt enemies not empty
+  L -> Log : combatLog("found N monsters")
+  loop for each enemy
+    L -> Log : combatLog("- enemy name (HP/maxHP)")
+  end
+else items not empty
+  L -> Log : gameLog("found items")
+  loop for each item
+    L -> P : addItem(item)
+    L -> Log : gameLog("- item name (desc)")
+  end
+  L -> L : items.clear()
+else empty place
+  L -> Log : gameLog("place is empty")
+end
+@enduml

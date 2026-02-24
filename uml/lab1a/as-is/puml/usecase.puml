@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+actor "Player" as Player
+
+rectangle "RPG Game" {
+  usecase "Start game" as UC1
+  usecase "Show help" as UC2
+  usecase "Explore location" as UC3
+  usecase "Start combat" as UC4
+  usecase "Move left" as UC5
+  usecase "Move right" as UC6
+  usecase "Show status / inventory" as UC7
+  usecase "Sleep (in village)" as UC8
+  usecase "Use item (1-9)" as UC9
+  usecase "Quit game" as UC10
+}
+
+Player --> UC1
+Player --> UC2
+Player --> UC3
+Player --> UC4
+Player --> UC5
+Player --> UC6
+Player --> UC7
+Player --> UC8
+Player --> UC9
+Player --> UC10
+@enduml

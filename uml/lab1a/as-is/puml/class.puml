@@ -1,0 +1,145 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide empty members
+
+package "common" {
+  class Logger {
+    +{static} getInstance() : Logger&
+    +info(message: string)
+    +warning(message: string)
+    +error(message: string)
+    +combatLog(message: string)
+    +gameLog(message: string)
+  }
+
+  class Utils {
+    +{static} getCharNonBlock() : int
+    +{static} chance(percentage:int) : bool
+    +{static} sleep(ms:int)
+  }
+}
+
+package "items" {
+  abstract class Item {
+    #name : string
+    #description : string
+    #usageMessage : string
+    #value : int
+    +use(user: Character)
+    +getType() : string
+  }
+
+  class Weapon {
+    #damage : int
+    +use(user: Character)
+    +getType() : string
+    +getDamage() : int
+  }
+
+  class Stick
+  class Sword
+  class Axe
+
+  class HealthPotion {
+    -healAmount : int
+    +use(user: Character)
+    +getType() : string
+    +getHealAmount() : int
+  }
+
+  Item <|-- Weapon
+  Weapon <|-- Stick
+  Weapon <|-- Sword
+  Weapon <|-- Axe
+  Item <|-- HealthPotion
+}
+
+package "entities" {
+  abstract class Character {
+    #name : string
+    #level : int
+    #health : int
+    #maxHealth : int
+    #baseAttack : int
+    #attack : int
+    #defense : int
+    #inventory : vector<shared_ptr<Item>>
+    #equippedWeapon : shared_ptr<Weapon>
+    +attackTarget(target: Character)
+    +takeDamage(amount:int)
+    +heal(amount:int)
+    +isAlive() : bool
+    +addItem(item: shared_ptr<Item>)
+    +equipWeapon(weapon: shared_ptr<Weapon>)
+    +unequipWeapon()
+    +getClassName() : string
+  }
+
+  class Player {
+    -experience : int
+    -experienceToNextLevel : int
+    +gainExperience(amount:int)
+    +levelUp()
+    +useItem(index: size_t)
+    +getClassName() : string
+  }
+
+  class Enemy {
+    -experienceReward : int
+    +getExperienceReward() : int
+    +getClassName() : string
+  }
+
+  Character <|-- Player
+  Character <|-- Enemy
+  Character o-- "0..*" Item : inventory
+  Character o-- "0..1" Weapon : equipped
+}
+
+package "world" {
+  class LocationNode {
+    -name : string
+    -description : string
+    -enemies : vector<shared_ptr<Enemy>>
+    -items : vector<shared_ptr<Item>>
+    -left : LocationNode*
+    -right : LocationNode*
+    +explore(player: Player)
+    +hasEnemies() : bool
+    +getEnemies() : vector<shared_ptr<Enemy>>&
+    +removeEnemy(index: size_t)
+  }
+
+  class WorldMap {
+    -root : LocationNode*
+    -currentLocation : LocationNode*
+    +getCurrentLocation() : LocationNode*
+    +moveLeft()
+    +moveRight()
+    +destructWorld()
+  }
+
+  WorldMap --> LocationNode : current/root
+  LocationNode --> "0..1" LocationNode : left
+  LocationNode --> "0..1" LocationNode : right
+  LocationNode o-- "0..*" Enemy
+  LocationNode o-- "0..*" Item
+}
+
+class Game {
+  -isRunning : bool
+  -hasSlept : bool
+  -player : unique_ptr<Player>
+  -world : unique_ptr<WorldMap>
+  -handleCombat()
+  -showHelp()
+  -showGameOver()
+  +run()
+  +{static} getInstance() : Game&
+}
+
+Game *-- Player
+Game *-- WorldMap
+Game ..> Logger
+Game ..> Utils
+@enduml

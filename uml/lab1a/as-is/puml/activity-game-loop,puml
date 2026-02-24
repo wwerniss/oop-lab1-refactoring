@@ -1,0 +1,70 @@
+@startuml
+title Activity: Game::run() (main loop)
+
+start
+:clearScreen();
+:showTitle();
+:ask playerName;
+if (playerName empty?) then (yes)
+  :playerName="Герой";
+endif
+:create Player(playerName);
+:create WorldMap();
+:isRunning=true;
+:print controls & intro logs;
+:Utils::setRawMode(true);
+
+while (isRunning?) is (yes)
+  :location = world.getCurrentLocation();
+  :Logger.gameLog(location name+description);
+
+  if (location.hasEnemies()?) then (yes)
+    :Logger.combatLog("Enemies here, press F");
+  endif
+
+  :input = tolower(Utils.getCharNonBlock())\n(wait until != -1);
+
+  if (input is digit 1..9 AND item exists?) then (yes)
+    :player.inventory[idx].use(*player);
+    :Logger.gameLog(usageMessage);
+    :erase item from inventory;
+  else (no)
+    switch (input)
+      case (e)
+        :location.explore(*player);
+      case (f)
+        :handleCombat();
+      case (s)
+        :player.showStatus();
+      case (l)
+        :world.moveLeft();
+      case (r)
+        :world.moveRight();
+      case (z)
+        if (currentLocation.name == "Село"?) then (yes)
+          if (hasSlept?) then (yes)
+            :Logger.gameLog("Already rested");
+          else (no)
+            :hasSlept=true;
+            :heal to max;
+            :Logger.gameLog("Healed amount");
+          endif
+        else (no)
+          :Logger.gameLog("Sleep only in village");
+        endif
+      case (h)
+        :showHelp();
+      case (q)
+        :isRunning=false;
+        :Logger.gameLog("Thanks");
+      case (default)
+        :Logger.warning("Unknown command");
+    endswitch
+  endif
+
+  :usleep(100ms);
+endwhile (no)
+
+:Utils::setRawMode(false);
+stop
+@enduml

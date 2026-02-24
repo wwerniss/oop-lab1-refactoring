@@ -1,0 +1,37 @@
+@startuml
+title State Machine: Game states
+
+[*] --> Init
+Init --> Running : run()\ncreate Player/World\nsetRawMode(true)
+
+state Running {
+  [*] --> Idle
+
+  Idle --> Exploring : 'e' / explore()
+  Exploring --> Idle
+
+  Idle --> StatusView : 's' / showStatus()
+  StatusView --> Idle
+
+  Idle --> HelpView : 'h' / showHelp()
+  HelpView --> Idle
+
+  Idle --> Moving : 'l' or 'r'\nmoveLeft/moveRight
+  Moving --> Idle
+
+  Idle --> Resting : 'z' (in village)\nheal+hasSlept
+  Resting --> Idle
+
+  Idle --> CombatReady : hasEnemies()
+  CombatReady --> InCombat : 'f' / handleCombat()
+  InCombat --> Idle : combat ends
+
+  Idle --> UsingItem : '1'..'9' / item.use()
+  UsingItem --> Idle
+}
+
+Running --> Exit : 'q'\n(isRunning=false)
+Running --> GameOver : player dies\n(showGameOver())
+GameOver --> Exit
+Exit --> [*]
+@enduml

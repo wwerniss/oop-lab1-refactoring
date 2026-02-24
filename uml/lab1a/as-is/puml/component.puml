@@ -1,0 +1,46 @@
+@startuml
+title Component/Package view (AS-IS)
+
+package "game" {
+  [Game] as GameCmp
+}
+
+package "world" {
+  [WorldMap] as WorldMapCmp
+  [LocationNode] as LocationNodeCmp
+}
+
+package "entities" {
+  [Character] as CharacterCmp
+  [Player] as PlayerCmp
+  [Enemy] as EnemyCmp
+}
+
+package "items" {
+  [Item] as ItemCmp
+  [Weapon] as WeaponCmp
+  [HealthPotion] as PotionCmp
+  [Axe/Sword/Stick] as WeaponsCmp
+}
+
+package "common" {
+  [Logger] as LoggerCmp
+  [Utils] as UtilsCmp
+}
+
+GameCmp --> WorldMapCmp
+WorldMapCmp --> LocationNodeCmp
+LocationNodeCmp --> EnemyCmp
+LocationNodeCmp --> ItemCmp
+
+PlayerCmp --> CharacterCmp
+EnemyCmp --> CharacterCmp
+CharacterCmp --> ItemCmp
+WeaponCmp --> ItemCmp
+PotionCmp --> ItemCmp
+WeaponsCmp --> WeaponCmp
+
+GameCmp ..> LoggerCmp
+GameCmp ..> UtilsCmp
+LocationNodeCmp ..> LoggerCmp
+@enduml
