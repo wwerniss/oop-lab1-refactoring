@@ -8,5 +8,5 @@ var searchData=
   ['healthpotion_5',['healthpotion',['../classHealthPotion.html',1,'HealthPotion'],['../classHealthPotion.html#a99e942956f7f1e07dd13c46daae08713',1,'HealthPotion::HealthPotion()'],['../md_docs_2documentation__en.html#autotoc_md15',1,'HealthPotion'],['../md_docs_2documentation__ua.html#autotoc_md44',1,'HealthPotion']]],
   ['healthpotion_2ecpp_6',['HealthPotion.cpp',['../HealthPotion_8cpp.html',1,'']]],
   ['healthpotion_2eh_7',['HealthPotion.h',['../HealthPotion_8h.html',1,'']]],
-  ['hierarchy_8',['Inheritance Hierarchy',['../md_README.html#autotoc_md86',1,'']]]
+  ['hierarchy_8',['Inheritance Hierarchy',['../md_README.html#autotoc_md94',1,'']]]
 ];

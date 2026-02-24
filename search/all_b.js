@@ -9,7 +9,7 @@ var searchData=
   ['mechanics_5fen_2emd_6',['mechanics_en.md',['../mechanics__en_8md.html',1,'']]],
   ['mechanics_5fua_2emd_7',['mechanics_ua.md',['../mechanics__ua_8md.html',1,'']]],
   ['memory_20management_8',['Memory Management',['../md_docs_2documentation__en.html#autotoc_md21',1,'']]],
-  ['methods_9',['Key Non-trivial Methods',['../md_README.html#autotoc_md78',1,'']]],
+  ['methods_9',['Key Non-trivial Methods',['../md_README.html#autotoc_md86',1,'']]],
   ['movecursor_10',['moveCursor',['../classUtils.html#aeb071b3276113d78844bab86d743a5f9',1,'Utils']]],
   ['moveleft_11',['moveLeft',['../classWorldMap.html#aa091b65c6814a6567cc9a88a4cf07dd0',1,'WorldMap']]],
   ['moveright_12',['moveRight',['../classWorldMap.html#a92e36760d89fe07159083b4f39a37911',1,'WorldMap']]]
