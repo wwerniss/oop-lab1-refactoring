@@ -3,7 +3,6 @@ A console RPG with turn-based combat and procedural generation elements.
 
 You are the one who survived after fleeing your hometown — a name you’ve forgotten due to trauma. The only things you remember are the name Eirin and the taste of ash on your tongue. The village where you woke up is a border settlement on the edge of the Dark Forest, where scouts from the Flame Guild have recently been disappearing.
 
-
 [Mechanics [EN]](./docs/mechanics_en.md) | [Mechanics [UA]](./docs/mechanics_ua.md) | [Technical details [EN]](./docs/documentation_en.md) | [Technical details [UA]](./docs/documentation_ua.md)
 
 ![Preview screenshot](./images/weapon_update_preview.png)
@@ -47,6 +46,10 @@ or
 chmod 777 ./tools/run.sh 
 ./tools/run.sh
 ```
+
+## Documentation
+
+For more detailed information use our automatically-generated Doxygen documentation - https://wwerniss.github.io/blazing-tests
 
 ## Controls
 
