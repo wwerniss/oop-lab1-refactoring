@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mechanics_0',['Game Mechanics',['../md_docs_2mechanics__en.html',1,'']]]
+  ['instagram_20glossary_0',['Instagram Glossary',['../md_uml_2extra_2lab1b-instagram_2GLOSSARY.html',1,'']]]
 ];

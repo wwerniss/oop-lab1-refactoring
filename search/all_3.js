@@ -14,8 +14,9 @@ var searchData=
   ['details_11',['Technical Implementation Details',['../md_docs_2documentation__en.html#autotoc_md20',1,'']]],
   ['development_12',['Development',['../md_README.html#autotoc_md74',1,'']]],
   ['diagrams_13',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]],
-  ['documentation_14',['documentation',['../md_docs_2documentation__en.html',1,'Blazing Darkness - Technical Documentation'],['../md_docs_2documentation__en.html#autotoc_md4',1,'Detailed Component Documentation'],['../md_README.html#autotoc_md78',1,'Documentation']]],
-  ['documentation_5fen_2emd_15',['documentation_en.md',['../documentation__en_8md.html',1,'']]],
-  ['documentation_5fua_2emd_16',['documentation_ua.md',['../documentation__ua_8md.html',1,'']]],
-  ['drawfooter_17',['drawFooter',['../classUtils.html#a94f5198a4cdfeb8a479cfe34a84b81b8',1,'Utils']]]
+  ['diagrams_20i_20used_14',['Supported diagrams I used',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md101',1,'']]],
+  ['documentation_15',['documentation',['../md_docs_2documentation__en.html',1,'Blazing Darkness - Technical Documentation'],['../md_docs_2documentation__en.html#autotoc_md4',1,'Detailed Component Documentation'],['../md_README.html#autotoc_md78',1,'Documentation']]],
+  ['documentation_5fen_2emd_16',['documentation_en.md',['../documentation__en_8md.html',1,'']]],
+  ['documentation_5fua_2emd_17',['documentation_ua.md',['../documentation__ua_8md.html',1,'']]],
+  ['drawfooter_18',['drawFooter',['../classUtils.html#a94f5198a4cdfeb8a479cfe34a84b81b8',1,'Utils']]]
 ];
