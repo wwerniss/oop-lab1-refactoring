@@ -1,0 +1,28 @@
+@startuml
+title TO-BE State Machine: Game with State pattern
+
+[*] --> Init
+Init --> Exploration : run()\ncreate Player/World/UI\nset currentState = ExplorationState
+
+state Exploration {
+  [*] --> WaitingInput
+  WaitingInput --> Updating : input received
+  Updating --> WaitingInput : continue exploring
+  Updating --> Combat : enemies detected + fight command
+  Updating --> Exit : quit command
+}
+
+state Combat {
+  [*] --> PlayerTurn
+  PlayerTurn --> EnemyTurn : player attacks
+  EnemyTurn --> PlayerTurn : enemies still alive and player alive
+  EnemyTurn --> Exploration : combat finished
+  EnemyTurn --> GameOver : player dies
+}
+
+Exploration --> Combat : Game.changeState(CombatState)
+Combat --> Exploration : Game.changeState(ExplorationState)
+
+GameOver --> Exit
+Exit --> [*]
+@enduml

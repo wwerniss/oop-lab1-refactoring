@@ -1,0 +1,83 @@
+@startuml
+title TO-BE Component / Package View
+skinparam linetype ortho
+
+package "core" {
+  [Game]
+  [IGameState]
+}
+
+package "states" {
+  [ExplorationState]
+  [CombatState]
+}
+
+package "ui" {
+  [IUserInterface]
+  [ConsoleUI]
+}
+
+package "world" {
+  [WorldMap]
+  [LocationNode]
+}
+
+package "entities" {
+  [Character]
+  [Player]
+  [Enemy]
+}
+
+package "items" {
+  [Item]
+  [Weapon]
+  [HealthPotion]
+}
+
+package "observer" {
+  [ISubject]
+  [IObserver]
+  [Logger]
+  [EventType]
+}
+
+package "factories" {
+  [EnemyFactory]
+}
+
+[Game] --> [IGameState]
+[Game] --> [IUserInterface]
+[Game] --> [WorldMap]
+[Game] --> [Player]
+
+[ExplorationState] --> [IGameState]
+[CombatState] --> [IGameState]
+
+[ExplorationState] --> [WorldMap]
+[ExplorationState] --> [IUserInterface]
+
+[CombatState] --> [WorldMap]
+[CombatState] --> [Player]
+[CombatState] --> [IUserInterface]
+
+[ConsoleUI] --> [IUserInterface]
+
+[WorldMap] --> [LocationNode]
+[LocationNode] --> [Enemy]
+[LocationNode] --> [Item]
+
+[Player] --> [Character]
+[Enemy] --> [Character]
+
+[Weapon] --> [Item]
+[HealthPotion] --> [Item]
+
+[WorldMap] --> [EnemyFactory]
+
+[WorldMap] ..> [ISubject]
+[LocationNode] ..> [ISubject]
+[Character] ..> [ISubject]
+
+[Logger] ..> [IObserver]
+[ISubject] ..> [IObserver]
+@enduml

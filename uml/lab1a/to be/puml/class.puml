@@ -1,0 +1,184 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+hide empty members
+
+package "ui" {
+  interface IUserInterface {
+    +showMessage(message: string)
+    +showWarning(message: string)
+    +showCombatMessage(message: string)
+    +showStatus(player: Player)
+    +readInput() : char
+  }
+
+  class ConsoleUI {
+    +showMessage(message: string)
+    +showWarning(message: string)
+    +showCombatMessage(message: string)
+    +showStatus(player: Player)
+    +readInput() : char
+  }
+
+  IUserInterface <|.. ConsoleUI
+}
+
+package "observer" {
+  enum EventType {
+    GameLog
+    CombatLog
+    Warning
+    Status
+  }
+
+  interface IObserver {
+    +onNotify(type: EventType, message: string)
+  }
+
+  interface ISubject {
+    +addObserver(observer: IObserver)
+    +removeObserver(observer: IObserver)
+    +notifyObservers(type: EventType, message: string)
+  }
+
+  class Logger {
+    +getInstance() : Logger&
+    +onNotify(type: EventType, message: string)
+  }
+
+  IObserver <|.. Logger
+}
+
+package "states" {
+  interface IGameState {
+    +handleInput(input: char)
+    +update()
+  }
+
+  class ExplorationState {
+    +handleInput(input: char)
+    +update()
+  }
+
+  class CombatState {
+    +handleInput(input: char)
+    +update()
+  }
+
+  IGameState <|.. ExplorationState
+  IGameState <|.. CombatState
+}
+
+package "factories" {
+  class EnemyFactory {
+    +createEnemy(type: string) : shared_ptr<Enemy>
+  }
+}
+
+package "items" {
+  abstract class Item {
+    +use(user: Character)
+    +getType() : string
+  }
+
+  class Weapon {
+    +getDamage() : int
+    +use(user: Character)
+  }
+
+  class HealthPotion {
+    +use(user: Character)
+    +getHealAmount() : int
+  }
+
+  Item <|-- Weapon
+  Item <|-- HealthPotion
+}
+
+package "entities" {
+  abstract class Character {
+    #name : string
+    #health : int
+    #maxHealth : int
+    #attack : int
+    #defense : int
+    #inventory : vector<shared_ptr<Item>>
+    +attackTarget(target: Character)
+    +takeDamage(amount:int)
+    +heal(amount:int)
+    +isAlive() : bool
+    +addItem(item: shared_ptr<Item>)
+  }
+
+  class Player {
+    -experience : int
+    +gainExperience(amount:int)
+    +levelUp()
+    +useItem(index: size_t)
+  }
+
+  class Enemy {
+    -experienceReward : int
+    +getExperienceReward() : int
+  }
+
+  Character <|-- Player
+  Character <|-- Enemy
+  Character o-- "0..*" Item : inventory
+}
+
+package "world" {
+  class LocationNode {
+    -name : string
+    -description : string
+    -enemies : vector<shared_ptr<Enemy>>
+    -items : vector<shared_ptr<Item>>
+    +explore(player: Player)
+    +hasEnemies() : bool
+    +getEnemies() : vector<shared_ptr<Enemy>>&
+    +removeEnemy(index: size_t)
+  }
+
+  class WorldMap {
+    -currentLocation : LocationNode*
+    +getCurrentLocation() : LocationNode*
+    +moveLeft()
+    +moveRight()
+  }
+
+  ISubject <|.. LocationNode
+  ISubject <|.. WorldMap
+  WorldMap --> LocationNode : current
+  LocationNode o-- "0..*" Enemy
+  LocationNode o-- "0..*" Item
+}
+
+class Game {
+  -isRunning : bool
+  -player : unique_ptr<Player>
+  -world : unique_ptr<WorldMap>
+  -ui : unique_ptr<IUserInterface>
+  -currentState : unique_ptr<IGameState>
+  +run()
+  +changeState(state: unique_ptr<IGameState>)
+}
+
+Game *-- Player
+Game *-- WorldMap
+Game *-- IUserInterface
+Game *-- IGameState
+
+ExplorationState --> Game
+ExplorationState --> WorldMap
+ExplorationState --> IUserInterface
+
+CombatState --> Game
+CombatState --> Player
+CombatState --> WorldMap
+CombatState --> IUserInterface
+
+LocationNode ..> IObserver : notifies
+WorldMap ..> IObserver : notifies
+Character ..> IObserver : notifies
+WorldMap ..> EnemyFactory : creates enemies
+@enduml

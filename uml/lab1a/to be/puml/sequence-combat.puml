@@ -1,0 +1,44 @@
+@startuml
+hide footbox
+title TO-BE Sequence: Combat via CombatState
+
+actor PlayerUser as U
+participant Game as G
+participant CombatState as CS
+participant IUserInterface as UI
+participant WorldMap as W
+participant LocationNode as L
+participant Player as P
+participant Enemy as E
+participant Logger as Log
+
+U -> G : input 'f'
+G -> CS : handleInput('f')
+CS -> W : getCurrentLocation()
+W --> CS : L
+CS -> L : hasEnemies()
+
+alt enemies exist
+  loop each combat turn
+    CS -> UI : readInput()
+    alt player attacks
+      CS -> P : attackTarget(E)
+      CS -> L : notifyObservers(CombatLog, ...)
+      L -> Log : onNotify(CombatLog, ...)
+      alt enemy dies
+        CS -> P : gainExperience(...)
+        CS -> L : removeEnemy(index)
+      end
+    else enemies attack
+      CS -> E : attackTarget(P)
+      CS -> L : notifyObservers(CombatLog, ...)
+      L -> Log : onNotify(CombatLog, ...)
+      alt player dies
+        CS -> G : changeState(ExplorationState or GameOver)
+      end
+    end
+  end
+else no enemies
+  CS -> UI : showWarning("No enemies here")
+end
+@enduml
