@@ -14,6 +14,8 @@
 #include "world/WorldMap.h"
 #include "common/Logger.h"
 #include "common/Utils.h"
+#include "ui/IUserInterface.h"
+#include "states/IGameState.h"
 
 /**
  * @brief The main game class that controls the overall game flow.
@@ -23,32 +25,12 @@
  */
 class Game {
 private:
+    std::shared_ptr<IUserInterface> ui;
     bool isRunning;
     std::unique_ptr<Player> player;
     std::unique_ptr<WorldMap> world;
     bool hasSlept; // Track if player has already slept
-    
-    /**
-     * @brief Clears the terminal screen.
-     * 
-     * This method clears the console screen using system-specific commands
-     * to provide a clean interface for the game.
-     */
-    void clearScreen();
-    
-    /**
-     * @brief Displays the game title screen.
-     * 
-     * Shows the ASCII art title of the game "Blazing Darkness".
-     */
-    void showTitle();
-    
-    /**
-     * @brief Displays help information to the player.
-     * 
-     * Shows available commands and their descriptions for game navigation.
-     */
-    void showHelp();
+    std::shared_ptr<IGameState> currentState;
     
     /**
      * @brief Displays game over message.
@@ -57,13 +39,7 @@ private:
      */
     void showGameOver();
     
-    /**
-     * @brief Handles combat with enemies.
-     * 
-     * Manages the combat system including enemy targeting, attack sequences,
-     * and win/lose conditions.
-     */
-    void handleCombat();
+    // Removed: void handleCombat();
     
 public:
     /**
@@ -97,4 +73,18 @@ public:
      * @throws std::runtime_error If there are issues with game initialization or execution
      */
     void run();
+
+    // -- State Pattern methods --
+    void changeState(std::shared_ptr<IGameState> newState);
+
+    // -- Getters & Setters for States --
+    std::unique_ptr<Player>& getPlayer() { return player; }
+    std::unique_ptr<WorldMap>& getWorld() { return world; }
+    std::shared_ptr<IUserInterface> getUI() { return ui; }
+    
+    bool getIsRunning() const { return isRunning; }
+    void setIsRunning(bool running) { isRunning = running; }
+    
+    bool getHasSlept() const { return hasSlept; }
+    void setHasSlept(bool slept) { hasSlept = slept; }
 };

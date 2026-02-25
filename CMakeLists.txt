@@ -31,6 +31,8 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/src/entities
     ${CMAKE_SOURCE_DIR}/src/items
     ${CMAKE_SOURCE_DIR}/src/world
+    ${CMAKE_SOURCE_DIR}/src/ui
+    ${CMAKE_SOURCE_DIR}/src/states
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -40,6 +42,8 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/src/entities
     ${CMAKE_SOURCE_DIR}/src/items
     ${CMAKE_SOURCE_DIR}/src/world
+    ${CMAKE_SOURCE_DIR}/src/ui
+    ${CMAKE_SOURCE_DIR}/src/states
 )
 
 # Link system libraries if needed
