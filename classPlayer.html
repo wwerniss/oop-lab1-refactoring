@@ -167,9 +167,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad81b8bf19f8dafbf4642cffb127dd9b2 inherit pub_methods_classCharacter" id="r_ad81b8bf19f8dafbf4642cffb127dd9b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ad81b8bf19f8dafbf4642cffb127dd9b2">addItem</a> (std::shared_ptr&lt; <a class="el" href="classItem.html">Item</a> &gt; item)</td></tr>
 <tr class="memdesc:ad81b8bf19f8dafbf4642cffb127dd9b2 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an item to the character's inventory.  <br /></td></tr>
 <tr class="separator:ad81b8bf19f8dafbf4642cffb127dd9b2 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8860aed888da7efcafb743509540764f inherit pub_methods_classCharacter" id="r_a8860aed888da7efcafb743509540764f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a8860aed888da7efcafb743509540764f">showStatus</a> () const</td></tr>
-<tr class="memdesc:a8860aed888da7efcafb743509540764f inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the character's status and inventory.  <br /></td></tr>
-<tr class="separator:a8860aed888da7efcafb743509540764f inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae628cbc7225e8b290c391883702973e5 inherit pub_methods_classCharacter" id="r_ae628cbc7225e8b290c391883702973e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ae628cbc7225e8b290c391883702973e5">equipWeapon</a> (std::shared_ptr&lt; <a class="el" href="classWeapon.html">Weapon</a> &gt; weapon)</td></tr>
 <tr class="memdesc:ae628cbc7225e8b290c391883702973e5 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equips a weapon to the character.  <br /></td></tr>
 <tr class="separator:ae628cbc7225e8b290c391883702973e5 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +179,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad79f892fe576c7ef0804cad502d94517 inherit pub_methods_classCharacter" id="r_ad79f892fe576c7ef0804cad502d94517"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ad79f892fe576c7ef0804cad502d94517">getName</a> () const</td></tr>
 <tr class="memdesc:ad79f892fe576c7ef0804cad502d94517 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the character's name.  <br /></td></tr>
 <tr class="separator:ad79f892fe576c7ef0804cad502d94517 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06713215a5850ec92194a1a711fb8cd7 inherit pub_methods_classCharacter" id="r_a06713215a5850ec92194a1a711fb8cd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a06713215a5850ec92194a1a711fb8cd7">getLevel</a> () const</td></tr>
+<tr class="memdesc:a06713215a5850ec92194a1a711fb8cd7 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the character's level.  <br /></td></tr>
+<tr class="separator:a06713215a5850ec92194a1a711fb8cd7 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39eeebcbdbc13cd4d1d274da5d051f85 inherit pub_methods_classCharacter" id="r_a39eeebcbdbc13cd4d1d274da5d051f85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a39eeebcbdbc13cd4d1d274da5d051f85">getHealth</a> () const</td></tr>
 <tr class="memdesc:a39eeebcbdbc13cd4d1d274da5d051f85 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the character's current health.  <br /></td></tr>
 <tr class="separator:a39eeebcbdbc13cd4d1d274da5d051f85 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,9 +203,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac007d6ed0a5bc2e1d6db772e6677cae5 inherit pub_methods_classCharacter" id="r_ac007d6ed0a5bc2e1d6db772e6677cae5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classItem.html">Item</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ac007d6ed0a5bc2e1d6db772e6677cae5">getInventory</a> ()</td></tr>
 <tr class="memdesc:ac007d6ed0a5bc2e1d6db772e6677cae5 inherit pub_methods_classCharacter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the character's inventory (non-const version).  <br /></td></tr>
 <tr class="separator:ac007d6ed0a5bc2e1d6db772e6677cae5 inherit pub_methods_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classISubject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classISubject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classISubject.html">ISubject</a></td></tr>
+<tr class="memitem:ae7264a3f132816d45581a1b31845ecac inherit pub_methods_classISubject" id="r_ae7264a3f132816d45581a1b31845ecac"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISubject.html#ae7264a3f132816d45581a1b31845ecac">~ISubject</a> ()=default</td></tr>
+<tr class="separator:ae7264a3f132816d45581a1b31845ecac inherit pub_methods_classISubject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15bad44e2313cf15711ee1721c32e4bd inherit pub_methods_classISubject" id="r_a15bad44e2313cf15711ee1721c32e4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISubject.html#a15bad44e2313cf15711ee1721c32e4bd">addObserver</a> (<a class="el" href="classIObserver.html">IObserver</a> *observer)</td></tr>
+<tr class="memdesc:a15bad44e2313cf15711ee1721c32e4bd inherit pub_methods_classISubject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches a new observer to the subject.  <br /></td></tr>
+<tr class="separator:a15bad44e2313cf15711ee1721c32e4bd inherit pub_methods_classISubject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b0c0ab44ac088dcdf7f4469afeda30 inherit pub_methods_classISubject" id="r_ac4b0c0ab44ac088dcdf7f4469afeda30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISubject.html#ac4b0c0ab44ac088dcdf7f4469afeda30">removeObserver</a> (<a class="el" href="classIObserver.html">IObserver</a> *observer)</td></tr>
+<tr class="memdesc:ac4b0c0ab44ac088dcdf7f4469afeda30 inherit pub_methods_classISubject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches an observer.  <br /></td></tr>
+<tr class="separator:ac4b0c0ab44ac088dcdf7f4469afeda30 inherit pub_methods_classISubject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classISubject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classISubject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classISubject.html">ISubject</a></td></tr>
+<tr class="memitem:a52a6bc47f8f629883e95bbb2a81253d0 inherit pro_methods_classISubject" id="r_a52a6bc47f8f629883e95bbb2a81253d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISubject.html#a52a6bc47f8f629883e95bbb2a81253d0">notifyObservers</a> (<a class="el" href="IObserver_8h.html#a2628ea8d12e8b2563c32f05dc7fff6fa">EventType</a> type, const std::string &amp;message)</td></tr>
+<tr class="memdesc:a52a6bc47f8f629883e95bbb2a81253d0 inherit pro_methods_classISubject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies all attached observers of an event.  <br /></td></tr>
+<tr class="separator:a52a6bc47f8f629883e95bbb2a81253d0 inherit pro_methods_classISubject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classCharacter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classCharacter')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classCharacter.html">Character</a></td></tr>
 <tr class="memitem:a6592c35167738421f3e04ca8808d37db inherit pro_attribs_classCharacter" id="r_a6592c35167738421f3e04ca8808d37db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a6592c35167738421f3e04ca8808d37db">name</a></td></tr>
 <tr class="separator:a6592c35167738421f3e04ca8808d37db inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,6 +238,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a4b781b13dfc99a1e8758ca25d6144f30 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae023a3deab3e426ec2ecb3867e4b5454 inherit pro_attribs_classCharacter" id="r_ae023a3deab3e426ec2ecb3867e4b5454"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classWeapon.html">Weapon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ae023a3deab3e426ec2ecb3867e4b5454">equippedWeapon</a></td></tr>
 <tr class="separator:ae023a3deab3e426ec2ecb3867e4b5454 inherit pro_attribs_classCharacter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classISubject"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classISubject')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classISubject.html">ISubject</a></td></tr>
+<tr class="memitem:a66f4ce666ed8b85d694a9b73d6bc16fb inherit pro_attribs_classISubject" id="r_a66f4ce666ed8b85d694a9b73d6bc16fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classIObserver.html">IObserver</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISubject.html#a66f4ce666ed8b85d694a9b73d6bc16fb">observers</a></td></tr>
+<tr class="separator:a66f4ce666ed8b85d694a9b73d6bc16fb inherit pro_attribs_classISubject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classPlayer.html" title="Player character class.">Player</a> character class. </p>
@@ -473,7 +489,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 24 2026 23:15:43 for Blazing Darkness by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Wed Feb 25 2026 02:47:07 for Blazing Darkness by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

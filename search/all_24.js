@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ігрова_20механіка_0',['Ігрова механіка',['../md_docs_2documentation__ua.html#autotoc_md45',1,'']]],
-  ['інвентарем_1',['Керування інвентарем',['../md_docs_2documentation__ua.html#autotoc_md48',1,'']]],
-  ['інтерфейс_20команд_2',['Інтерфейс команд',['../md_docs_2mechanics__ua.html#autotoc_md62',1,'']]]
+  ['реалізації_0',['Технічні деталі реалізації',['../md_docs_2documentation__ua.html#autotoc_md49',1,'']]],
+  ['рефакторинг_1',['Звіт про рефакторинг',['../md_SUMMARY.html',1,'']]],
+  ['розширення_2',['Можливості розширення',['../md_docs_2documentation__ua.html#autotoc_md56',1,'']]]
 ];

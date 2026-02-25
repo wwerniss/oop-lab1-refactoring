@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['_7echaracter_0',['~Character',['../classCharacter.html#a3333a88ae593c36b229c90371e935d42',1,'Character']]],
-  ['_7ehealthpotion_1',['~HealthPotion',['../classHealthPotion.html#a7c841be5af4291b3de0287942afe831c',1,'HealthPotion']]],
-  ['_7eitem_2',['~Item',['../classItem.html#af11f5c0709f76d8683d95d8476be85a4',1,'Item']]],
-  ['_7elocationnode_3',['~LocationNode',['../classLocationNode.html#aea3da37713d9cd3f6214304f02437159',1,'LocationNode']]],
-  ['_7eworldmap_4',['~WorldMap',['../classWorldMap.html#ae9cf3ee707e53755952d440b747e35e1',1,'WorldMap']]]
+  ['unequipweapon_0',['unequipWeapon',['../classCharacter.html#a378012b9cace6b6f66328fc0b8f8d002',1,'Character']]],
+  ['update_1',['update',['../classCombatState.html#ab521f8a29f7396124ee55d5306010b24',1,'CombatState::update()'],['../classExplorationState.html#a4b9d61c57d8e2c7d451578511360d2f8',1,'ExplorationState::update()'],['../classIGameState.html#a2d858b7edce8a502013694cad0d82682',1,'IGameState::update()']]],
+  ['use_2',['use',['../classHealthPotion.html#a772e4095a4aa1b2d67e9164cdcb69321',1,'HealthPotion::use()'],['../classItem.html#a986a36156b31f9b2189189ce21fa8ab9',1,'Item::use()'],['../classWeapon.html#a847b022365a474274ad13dcf91430ae4',1,'Weapon::use()']]],
+  ['useitem_3',['useItem',['../classPlayer.html#a2d8f89c71ed51550bc27071ecfae3f43',1,'Player']]]
 ];

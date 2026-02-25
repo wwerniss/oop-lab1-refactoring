@@ -115,6 +115,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ab78f5ed0d5ea879157357cf2fb2afa" id="r_a1ab78f5ed0d5ea879157357cf2fb2afa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a1ab78f5ed0d5ea879157357cf2fb2afa">run</a> ()</td></tr>
 <tr class="memdesc:a1ab78f5ed0d5ea879157357cf2fb2afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the main game loop.  <br /></td></tr>
 <tr class="separator:a1ab78f5ed0d5ea879157357cf2fb2afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759ed4e4f02bd523af5511bf5a92053e" id="r_a759ed4e4f02bd523af5511bf5a92053e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a759ed4e4f02bd523af5511bf5a92053e">changeState</a> (std::shared_ptr&lt; <a class="el" href="classIGameState.html">IGameState</a> &gt; newState)</td></tr>
+<tr class="separator:a759ed4e4f02bd523af5511bf5a92053e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7c20e0453c15a26a40d7f065fa3fd5" id="r_a4d7c20e0453c15a26a40d7f065fa3fd5"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a4d7c20e0453c15a26a40d7f065fa3fd5">getPlayer</a> ()</td></tr>
+<tr class="separator:a4d7c20e0453c15a26a40d7f065fa3fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6aae0bd15f7852bf4cf689766a5b21e" id="r_ac6aae0bd15f7852bf4cf689766a5b21e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classWorldMap.html">WorldMap</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ac6aae0bd15f7852bf4cf689766a5b21e">getWorld</a> ()</td></tr>
+<tr class="separator:ac6aae0bd15f7852bf4cf689766a5b21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850dea60ccfb2cf53cbcba90595ba7fc" id="r_a850dea60ccfb2cf53cbcba90595ba7fc"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classIUserInterface.html">IUserInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a850dea60ccfb2cf53cbcba90595ba7fc">getUI</a> ()</td></tr>
+<tr class="separator:a850dea60ccfb2cf53cbcba90595ba7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6deb5564dc2c9c773f287566f1aef99" id="r_ab6deb5564dc2c9c773f287566f1aef99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ab6deb5564dc2c9c773f287566f1aef99">getIsRunning</a> () const</td></tr>
+<tr class="separator:ab6deb5564dc2c9c773f287566f1aef99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de24fb24bf94c187848d9038322a910" id="r_a4de24fb24bf94c187848d9038322a910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a4de24fb24bf94c187848d9038322a910">setIsRunning</a> (bool running)</td></tr>
+<tr class="separator:a4de24fb24bf94c187848d9038322a910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8779ba7eae5f90725b47488ec9282274" id="r_a8779ba7eae5f90725b47488ec9282274"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a8779ba7eae5f90725b47488ec9282274">getHasSlept</a> () const</td></tr>
+<tr class="separator:a8779ba7eae5f90725b47488ec9282274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5b015449194dc7765d11c684d49a37" id="r_a9e5b015449194dc7765d11c684d49a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a9e5b015449194dc7765d11c684d49a37">setHasSlept</a> (bool slept)</td></tr>
+<tr class="separator:a9e5b015449194dc7765d11c684d49a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -150,6 +166,53 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a759ed4e4f02bd523af5511bf5a92053e" name="a759ed4e4f02bd523af5511bf5a92053e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759ed4e4f02bd523af5511bf5a92053e">&#9670;&#160;</a></span>changeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::changeState </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classIGameState.html">IGameState</a> &gt;&#160;</td>
+          <td class="paramname"><em>newState</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a4">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a8779ba7eae5f90725b47488ec9282274" name="a8779ba7eae5f90725b47488ec9282274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8779ba7eae5f90725b47488ec9282274">&#9670;&#160;</a></span>getHasSlept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Game::getHasSlept </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a10">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="a2933df060e48bfcdd214f8eafb09b023" name="a2933df060e48bfcdd214f8eafb09b023"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2933df060e48bfcdd214f8eafb09b023">&#9670;&#160;</a></span>getInstance()</h2>
 
@@ -173,6 +236,114 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a2">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>, and <a class="el" href="examples_2game_example_8cpp-example.html#a2">examples/game_example.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6deb5564dc2c9c773f287566f1aef99" name="ab6deb5564dc2c9c773f287566f1aef99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6deb5564dc2c9c773f287566f1aef99">&#9670;&#160;</a></span>getIsRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Game::getIsRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a8">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d7c20e0453c15a26a40d7f065fa3fd5" name="a4d7c20e0453c15a26a40d7f065fa3fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d7c20e0453c15a26a40d7f065fa3fd5">&#9670;&#160;</a></span>getPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classPlayer.html">Player</a> &gt; &amp; Game::getPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a5">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a850dea60ccfb2cf53cbcba90595ba7fc" name="a850dea60ccfb2cf53cbcba90595ba7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850dea60ccfb2cf53cbcba90595ba7fc">&#9670;&#160;</a></span>getUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classIUserInterface.html">IUserInterface</a> &gt; Game::getUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a7">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6aae0bd15f7852bf4cf689766a5b21e" name="ac6aae0bd15f7852bf4cf689766a5b21e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6aae0bd15f7852bf4cf689766a5b21e">&#9670;&#160;</a></span>getWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classWorldMap.html">WorldMap</a> &gt; &amp; Game::getWorld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a6">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
 </dl>
 
 </div>
@@ -205,6 +376,62 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9e5b015449194dc7765d11c684d49a37" name="a9e5b015449194dc7765d11c684d49a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5b015449194dc7765d11c684d49a37">&#9670;&#160;</a></span>setHasSlept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::setHasSlept </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>slept</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a11">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a4de24fb24bf94c187848d9038322a910" name="a4de24fb24bf94c187848d9038322a910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4de24fb24bf94c187848d9038322a910">&#9670;&#160;</a></span>setIsRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Game::setIsRunning </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>running</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2oop-lab1-refactoring_2oop-lab1-refactoring_2src_2Game_8h-example.html#a9">/home/runner/work/oop-lab1-refactoring/oop-lab1-refactoring/src/Game.h</a>.</dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Game_8h_source.html">Game.h</a></li>
 <li>src/<a class="el" href="Game_8cpp.html">Game.cpp</a></li>
@@ -212,7 +439,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 24 2026 23:15:43 for Blazing Darkness by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Wed Feb 25 2026 02:47:07 for Blazing Darkness by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['name_0',['name',['../classCharacter.html#a6592c35167738421f3e04ca8808d37db',1,'Character::name'],['../classItem.html#a342b7a351c9ae1c5430aa3ef65b670bd',1,'Item::name']]],
-  ['navigation_1',['World / Navigation',['../md_GLOSSARY.html#autotoc_md66',1,'']]],
-  ['non_20trivial_20methods_2',['Key Non-trivial Methods',['../md_README.html#autotoc_md86',1,'']]],
-  ['notation_20used_20in_20diagrams_3',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]]
+  ['level_0',['level',['../classCharacter.html#af15a478fe650b87f59cbe5d071697307',1,'Character']]],
+  ['levelup_1',['levelUp',['../classPlayer.html#a5bda3bad89f797546360636deb154fbb',1,'Player']]],
+  ['license_2',['License',['../md_README.html#autotoc_md96',1,'']]],
+  ['limitations_3',['Known Limitations',['../md_docs_2documentation__en.html#autotoc_md28',1,'']]],
+  ['locationnode_4',['locationnode',['../classLocationNode.html',1,'LocationNode'],['../classLocationNode.html#a0e9490b1974a309308550667d90440ce',1,'LocationNode::LocationNode()'],['../md_docs_2documentation__en.html#autotoc_md8',1,'LocationNode'],['../md_docs_2documentation__ua.html#autotoc_md37',1,'LocationNode']]],
+  ['locationnode_20class_5',['LocationNode Class',['../md_README.html#autotoc_md91',1,'']]],
+  ['locationnode_2ecpp_6',['LocationNode.cpp',['../LocationNode_8cpp.html',1,'']]],
+  ['locationnode_2eh_7',['LocationNode.h',['../LocationNode_8h.html',1,'']]],
+  ['log_8',['log',['../classLogger.html#ac0f4f6c60b1531ba80f3a7086e38e1ed',1,'Logger']]],
+  ['logger_9',['Logger',['../classLogger.html',1,'']]],
+  ['logger_2eh_10',['Logger.h',['../Logger_8h.html',1,'']]],
+  ['logger_5fexample_2ecpp_11',['logger_example.cpp',['../logger__example_8cpp.html',1,'']]]
 ];

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['даних_0',['Потік даних',['../md_docs_2documentation__ua.html#autotoc_md53',1,'']]],
-  ['деталі_20реалізації_1',['Технічні деталі реалізації',['../md_docs_2documentation__ua.html#autotoc_md49',1,'']]],
-  ['документація_2',['Blazing Darkness - Технічна документація',['../md_docs_2documentation__ua.html',1,'']]],
-  ['документація_20компонентів_3',['Документація компонентів',['../md_docs_2documentation__ua.html#autotoc_md33',1,'']]],
-  ['дослідження_4',['Дослідження',['../md_docs_2documentation__ua.html#autotoc_md47',1,'']]]
+  ['аналіз_20дотримання_20принципів_20проєктування_0',['2. Аналіз дотримання принципів проєктування',['../md_SUMMARY.html#autotoc_md102',1,'']]],
+  ['архітектура_1',['Основна архітектура',['../md_docs_2documentation__ua.html#autotoc_md31',1,'']]]
 ];

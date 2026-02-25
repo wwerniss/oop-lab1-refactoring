@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['технічна_20документація_0',['Blazing Darkness - Технічна документація',['../md_docs_2documentation__ua.html',1,'']]]
+  ['механіка_20гри_0',['Механіка гри',['../md_docs_2mechanics__ua.html',1,'']]]
 ];

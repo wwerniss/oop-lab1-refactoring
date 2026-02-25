@@ -5,5 +5,17 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="Logger",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classLogger.html",tooltip="Singleton logger class for game messaging."];
+  Node0 [id="Node000000",label="ISubject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classISubject.html",tooltip="Subject interface that publishers must inherit from."];
+  Node0 -> Node1 [id="edge4_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="Character",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classCharacter.html",tooltip="Base character class for all game characters."];
+  Node1 -> Node2 [id="edge5_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Enemy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classEnemy.html",tooltip="Enemy character class."];
+  Node1 -> Node3 [id="edge6_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="PeacefulCharacter",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPeacefulCharacter.html",tooltip="Example demonstrating how to create new characters based on Character class."];
+  Node1 -> Node4 [id="edge7_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Player",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayer.html",tooltip="Player character class."];
+  Node0 -> Node5 [id="edge8_Node000000_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="LocationNode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classLocationNode.html",tooltip="Represents a location in the game world."];
+  Node0 -> Node6 [id="edge9_Node000000_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="WorldMap",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classWorldMap.html",tooltip="Manages the game world and location navigation."];
 }

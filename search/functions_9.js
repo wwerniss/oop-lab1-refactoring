@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_0',['Player',['../classPlayer.html#a45fa04a2a4ff9235e6c100b7c6ab232a',1,'Player']]]
+  ['notifyobservers_0',['notifyObservers',['../classISubject.html#a52a6bc47f8f629883e95bbb2a81253d0',1,'ISubject']]]
 ];

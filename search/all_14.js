@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['warning_0',['warning',['../classLogger.html#a5164af2f632902fa3c477d5c0cb463f7',1,'Logger']]],
-  ['we_20using_1',['Resources that we using',['../md_README.html#autotoc_md83',1,'']]],
-  ['weapon_2',['weapon',['../classWeapon.html#a737e5fefea802b85a053161d83a0876e',1,'Weapon::Weapon()'],['../classWeapon.html',1,'Weapon']]],
-  ['weapon_20class_3',['Weapon Class',['../md_README.html#autotoc_md93',1,'']]],
-  ['weapon_2ecpp_4',['Weapon.cpp',['../Weapon_8cpp.html',1,'']]],
-  ['weapon_2eh_5',['Weapon.h',['../Weapon_8h.html',1,'']]],
-  ['why_20i_20chose_20it_6',['Why I chose it',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md100',1,'']]],
-  ['workflow_7',['Workflow',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md102',1,'']]],
-  ['world_20navigation_8',['World / Navigation',['../md_GLOSSARY.html#autotoc_md66',1,'']]],
-  ['world_20system_9',['World System',['../md_docs_2documentation__en.html#autotoc_md6',1,'']]],
-  ['worldmap_10',['worldmap',['../classWorldMap.html#ad079799989e80b5469c880b8b40e000e',1,'WorldMap::WorldMap()'],['../md_docs_2documentation__ua.html#autotoc_md36',1,'WorldMap'],['../md_docs_2documentation__en.html#autotoc_md7',1,'WorldMap'],['../classWorldMap.html',1,'WorldMap']]],
-  ['worldmap_20class_11',['WorldMap Class',['../md_README.html#autotoc_md92',1,'']]],
-  ['worldmap_2ecpp_12',['WorldMap.cpp',['../WorldMap_8cpp.html',1,'']]],
-  ['worldmap_2eh_13',['WorldMap.h',['../WorldMap_8h.html',1,'']]],
-  ['worldtests_2ecpp_14',['WorldTests.cpp',['../WorldTests_8cpp.html',1,'']]]
+  ['uml_20notation_20used_20in_20diagrams_0',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]],
+  ['uml_20tool_20report_3a_20plantuml_1',['UML Tool Report: PlantUML',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html',1,'']]],
+  ['uml_5ftool_5freport_2emd_2',['UML_TOOL_REPORT.md',['../UML__TOOL__REPORT_8md.html',1,'']]],
+  ['unequipweapon_3',['unequipWeapon',['../classCharacter.html#a378012b9cace6b6f66328fc0b8f8d002',1,'Character']]],
+  ['update_4',['update',['../classCombatState.html#ab521f8a29f7396124ee55d5306010b24',1,'CombatState::update()'],['../classExplorationState.html#a4b9d61c57d8e2c7d451578511360d2f8',1,'ExplorationState::update()'],['../classIGameState.html#a2d858b7edce8a502013694cad0d82682',1,'IGameState::update()']]],
+  ['usagemessage_5',['usageMessage',['../classItem.html#a0e362cf89cadb8e97a96b35bf3e124fb',1,'Item']]],
+  ['use_6',['use',['../classWeapon.html#a847b022365a474274ad13dcf91430ae4',1,'Weapon::use()'],['../classHealthPotion.html#a772e4095a4aa1b2d67e9164cdcb69321',1,'HealthPotion::use()'],['../classItem.html#a986a36156b31f9b2189189ce21fa8ab9',1,'Item::use()']]],
+  ['used_7',['Supported diagrams I used',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md111',1,'']]],
+  ['used_20in_20diagrams_8',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]],
+  ['useitem_9',['useItem',['../classPlayer.html#a2d8f89c71ed51550bc27071ecfae3f43',1,'Player']]],
+  ['using_10',['Resources that we using',['../md_README.html#autotoc_md83',1,'']]],
+  ['utils_11',['Utils',['../classUtils.html',1,'']]],
+  ['utils_2ecpp_12',['Utils.cpp',['../Utils_8cpp.html',1,'']]],
+  ['utils_2eh_13',['Utils.h',['../Utils_8h.html',1,'']]],
+  ['utils_5fexample_2ecpp_14',['utils_example.cpp',['../utils__example_8cpp.html',1,'']]]
 ];

@@ -107,43 +107,55 @@ $(document).ready(function() { init_codefold(0); });
 <a href="WorldMap_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="LocationNode_8h.html">LocationNode.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classWorldMap.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classWorldMap.html">WorldMap</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_class" href="classLocationNode.html">LocationNode</a>* root;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classLocationNode.html">LocationNode</a>* currentLocation;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> createWorld();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="classWorldMap.html#ad079799989e80b5469c880b8b40e000e">WorldMap</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="classWorldMap.html#ae9cf3ee707e53755952d440b747e35e1">~WorldMap</a>();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="classLocationNode.html">LocationNode</a>* <a class="code hl_function" href="classWorldMap.html#a5390c6d3343d3161b71cb6c28521a928">getCurrentLocation</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#aa091b65c6814a6567cc9a88a4cf07dd0">moveLeft</a>();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#a92e36760d89fe07159083b4f39a37911">moveRight</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#a9ddec86f64994fc531bc7b2741ef195a">destructWorld</a>();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../common/IObserver.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classWorldMap.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classWorldMap.html">WorldMap</a> : <span class="keyword">public</span> <a class="code hl_class" href="classISubject.html">ISubject</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classLocationNode.html">LocationNode</a>* root;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classLocationNode.html">LocationNode</a>* currentLocation;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> createWorld();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="classWorldMap.html#ad079799989e80b5469c880b8b40e000e">WorldMap</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="classWorldMap.html#ae9cf3ee707e53755952d440b747e35e1">~WorldMap</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classLocationNode.html">LocationNode</a>* <a class="code hl_function" href="classWorldMap.html#a5390c6d3343d3161b71cb6c28521a928">getCurrentLocation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#aa091b65c6814a6567cc9a88a4cf07dd0">moveLeft</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#a92e36760d89fe07159083b4f39a37911">moveRight</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#a9ddec86f64994fc531bc7b2741ef195a">destructWorld</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classWorldMap.html#af40fc59dffda1631cf25f4dbc4fe7956">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classWorldMap.html#af40fc59dffda1631cf25f4dbc4fe7956">addObserver</a>(<a class="code hl_class" href="classIObserver.html">IObserver</a>* observer) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="classISubject.html#a15bad44e2313cf15711ee1721c32e4bd">ISubject::addObserver</a>(observer);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// We will propagate this to nodes on creation</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
 </div>
 <div class="ttc" id="aLocationNode_8h_html"><div class="ttname"><a href="LocationNode_8h.html">LocationNode.h</a></div></div>
-<div class="ttc" id="aclassLocationNode_html"><div class="ttname"><a href="classLocationNode.html">LocationNode</a></div><div class="ttdoc">Represents a location in the game world.</div><div class="ttdef"><b>Definition</b> LocationNode.h:26</div></div>
-<div class="ttc" id="aclassWorldMap_html"><div class="ttname"><a href="classWorldMap.html">WorldMap</a></div><div class="ttdoc">Manages the game world and location navigation.</div><div class="ttdef"><b>Definition</b> WorldMap.h:18</div></div>
+<div class="ttc" id="aclassIObserver_html"><div class="ttname"><a href="classIObserver.html">IObserver</a></div><div class="ttdoc">Observer interface for receiving game events.</div><div class="ttdef"><b>Definition</b> IObserver.h:24</div></div>
+<div class="ttc" id="aclassISubject_html"><div class="ttname"><a href="classISubject.html">ISubject</a></div><div class="ttdoc">Subject interface that publishers must inherit from.</div><div class="ttdef"><b>Definition</b> IObserver.h:40</div></div>
+<div class="ttc" id="aclassISubject_html_a15bad44e2313cf15711ee1721c32e4bd"><div class="ttname"><a href="classISubject.html#a15bad44e2313cf15711ee1721c32e4bd">ISubject::addObserver</a></div><div class="ttdeci">void addObserver(IObserver *observer)</div><div class="ttdoc">Attaches a new observer to the subject.</div><div class="ttdef"><b>Definition</b> IObserver.h:58</div></div>
+<div class="ttc" id="aclassLocationNode_html"><div class="ttname"><a href="classLocationNode.html">LocationNode</a></div><div class="ttdoc">Represents a location in the game world.</div><div class="ttdef"><b>Definition</b> LocationNode.h:27</div></div>
+<div class="ttc" id="aclassWorldMap_html"><div class="ttname"><a href="classWorldMap.html">WorldMap</a></div><div class="ttdoc">Manages the game world and location navigation.</div><div class="ttdef"><b>Definition</b> WorldMap.h:19</div></div>
 <div class="ttc" id="aclassWorldMap_html_a5390c6d3343d3161b71cb6c28521a928"><div class="ttname"><a href="classWorldMap.html#a5390c6d3343d3161b71cb6c28521a928">WorldMap::getCurrentLocation</a></div><div class="ttdeci">LocationNode * getCurrentLocation() const</div><div class="ttdoc">Gets the current location in the world.</div><div class="ttdef"><b>Definition</b> WorldMap.cpp:62</div></div>
 <div class="ttc" id="aclassWorldMap_html_a92e36760d89fe07159083b4f39a37911"><div class="ttname"><a href="classWorldMap.html#a92e36760d89fe07159083b4f39a37911">WorldMap::moveRight</a></div><div class="ttdeci">void moveRight()</div><div class="ttdoc">Moves the player to the right location.</div><div class="ttdef"><b>Definition</b> WorldMap.cpp:75</div></div>
 <div class="ttc" id="aclassWorldMap_html_a9ddec86f64994fc531bc7b2741ef195a"><div class="ttname"><a href="classWorldMap.html#a9ddec86f64994fc531bc7b2741ef195a">WorldMap::destructWorld</a></div><div class="ttdeci">void destructWorld()</div><div class="ttdoc">Destructs the world.</div><div class="ttdef"><b>Definition</b> WorldMap.cpp:23</div></div>
 <div class="ttc" id="aclassWorldMap_html_aa091b65c6814a6567cc9a88a4cf07dd0"><div class="ttname"><a href="classWorldMap.html#aa091b65c6814a6567cc9a88a4cf07dd0">WorldMap::moveLeft</a></div><div class="ttdeci">void moveLeft()</div><div class="ttdoc">Moves the player to the left location.</div><div class="ttdef"><b>Definition</b> WorldMap.cpp:66</div></div>
 <div class="ttc" id="aclassWorldMap_html_ad079799989e80b5469c880b8b40e000e"><div class="ttname"><a href="classWorldMap.html#ad079799989e80b5469c880b8b40e000e">WorldMap::WorldMap</a></div><div class="ttdeci">WorldMap()</div><div class="ttdoc">Constructs a new WorldMap instance.</div><div class="ttdef"><b>Definition</b> WorldMap.cpp:14</div></div>
 <div class="ttc" id="aclassWorldMap_html_ae9cf3ee707e53755952d440b747e35e1"><div class="ttname"><a href="classWorldMap.html#ae9cf3ee707e53755952d440b747e35e1">WorldMap::~WorldMap</a></div><div class="ttdeci">~WorldMap()</div><div class="ttdoc">Destructor for the WorldMap class.</div><div class="ttdef"><b>Definition</b> WorldMap.cpp:18</div></div>
+<div class="ttc" id="aclassWorldMap_html_af40fc59dffda1631cf25f4dbc4fe7956"><div class="ttname"><a href="classWorldMap.html#af40fc59dffda1631cf25f4dbc4fe7956">WorldMap::addObserver</a></div><div class="ttdeci">void addObserver(IObserver *observer)</div><div class="ttdoc">Overrides ISubject addObserver to also attach to all locations.</div><div class="ttdef"><b>Definition</b> WorldMap.h:90</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 24 2026 23:15:43 for Blazing Darkness by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Wed Feb 25 2026 02:47:07 for Blazing Darkness by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

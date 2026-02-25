@@ -22,5 +22,11 @@ digraph "examples/item_example.cpp"
   Node8 [id="Node000008",label="vector",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node7 -> Node5 [id="edge9_Node000007_Node000005",color="steelblue1",style="solid",tooltip=" "];
   Node7 -> Node3 [id="edge10_Node000007_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node6 -> Node4 [id="edge11_Node000006_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node7 -> Node9 [id="edge11_Node000007_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="../common/IObserver.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$IObserver_8h.html",tooltip=" "];
+  Node9 -> Node4 [id="edge12_Node000009_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node8 [id="edge13_Node000009_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node10 [id="edge14_Node000009_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="algorithm",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node6 -> Node4 [id="edge15_Node000006_Node000004",color="steelblue1",style="solid",tooltip=" "];
 }
