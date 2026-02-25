@@ -1,5 +1,4 @@
 #include "Character.h"
-#include "../common/Logger.h"
 #include "../items/Weapon.h"
 #include <algorithm>
 
@@ -10,7 +9,7 @@ Character::Character(const std::string& n, int lvl, int hp, int atk, int def)
 void Character::attackTarget(Character& target) {
     int damage = std::max(1, attack - target.defense / 2);
     target.takeDamage(damage);
-    Logger::getInstance().combatLog(
+    notifyObservers(EventType::CombatLog, 
         name + " атакує " + target.getName() + " на " + std::to_string(damage) + " урону!"
     );
 }
@@ -31,31 +30,7 @@ void Character::addItem(std::shared_ptr<Item> item) {
     inventory.push_back(item);
 }
 
-void Character::showStatus() const {
-    std::cout << "\n=== " << name << " === ";
-    std::cout << "Рівень: " << level << " | ";
-    std::cout << "Здоров'я: " << health << "/" << maxHealth << " | ";
-    std::cout << "Атака: " << attack << " | ";
-    std::cout << "Захист: " << defense << std::endl;
 
-    if (equippedWeapon) {
-        std::cout << "\nУ ваших руках " << equippedWeapon->getName() << std::endl;
-    } else {
-        std::cout << "\nУ ваших руках немає жодної зброї!" << std::endl;
-    }
-    
-    int counter = 0;
-    if (!inventory.empty()) {
-        std::cout << "\nІнвентар:";
-        for (const auto& item : inventory) {
-            std::cout << "\n" << ++counter << ". " << item->getName() << " (" << item->getDescription() << ")";
-        }
-        std::cout << "\nНатисніть номер предмету на клавіатурі, щоб використати його.";
-    } else {
-        std::cout << "\nВаш інвентар порожній.";
-    }
-    std::cout << std::endl << std::endl;
-}
 
 // Getters
 std::string Character::getName() const { 
@@ -85,15 +60,16 @@ void Character::equipWeapon(std::shared_ptr<Weapon> weapon) {
     
     equippedWeapon = weapon;
     attack = baseAttack + weapon->getDamage();
-    Logger::getInstance().gameLog("Екіпіровано: " + weapon->getName() + 
-                                " (+" + std::to_string(weapon->getDamage()) + " до атаки)");
+    notifyObservers(EventType::GameLog, 
+        "Екіпіровано: " + weapon->getName() + " (+" + std::to_string(weapon->getDamage()) + " до атаки)"
+    );
 }
 
 void Character::unequipWeapon() {
     if (!equippedWeapon) return;
     
     attack = baseAttack;
-    Logger::getInstance().gameLog("Знято: " + equippedWeapon->getName());
+    notifyObservers(EventType::GameLog, "Знято: " + equippedWeapon->getName());
     addItem(equippedWeapon);
     equippedWeapon = nullptr;
 }

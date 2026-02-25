@@ -15,6 +15,8 @@
 // Forward declarations
 class Character;
 class Item;
+#include "IUserInterface.h"
+#include "IObserver.h"
 
 /**
  * @brief Singleton logger class for game messaging.
@@ -23,7 +25,31 @@ class Item;
  * different log levels and color-coded output. It uses ANSI escape sequences for
  * colored terminal output to make messages more visually distinct.
  */
-class Logger {
+class Logger : public IObserver {
+private:
+    std::shared_ptr<IUserInterface> ui;
+
+    /**
+     * @brief Private constructor for the Logger class.
+     * 
+     * Prevents direct instantiation of the Logger class and enforces singleton pattern.
+     */
+    Logger() {}
+    
+    /**
+     * @brief Deleted copy constructor.
+     * 
+     * Prevents copying of the Logger instance to maintain singleton behavior.
+     */
+    Logger(const Logger&) = delete;
+    
+    /**
+     * @brief Deleted assignment operator.
+     * 
+     * Prevents assignment of the Logger instance to maintain singleton behavior.
+     */
+    Logger& operator=(const Logger&) = delete;
+
 public:
     /**
      * @brief Gets the singleton instance of the Logger class.
@@ -39,14 +65,22 @@ public:
     }
 
     /**
+     * @brief Sets the UI component for logging output.
+     */
+    void setUI(std::shared_ptr<IUserInterface> userInterface) {
+        ui = userInterface;
+    }
+
+    /**
      * @brief Logs a raw message without any formatting.
      * 
-     * Outputs the message directly to the console without any prefixes or colors.
+     * Outputs the message directly through the UI or console.
      * 
      * @param message The raw message to output
      */
     void raw(const std::string& message) {
-        std::cout << message;
+        if (ui) ui->showMessage(message);
+        else std::cout << message;
     }
 
     /**
@@ -60,7 +94,9 @@ public:
      * @param message The actual log message
      */
     void log(const std::string& prefix, const std::string& level, const std::string& message) {
-        std::cout << prefix << "[" << level << "] " << message << "\033[0m" << std::endl;
+        std::string fullMsg = prefix + "[" + level + "] " + message + "\033[0m";
+        if (ui) ui->showMessage(fullMsg);
+        else std::cout << fullMsg << std::endl;
     }
 
     /**
@@ -117,26 +153,17 @@ public:
     void gameLog(const std::string& message) {
         log("\033[35m", "ГРА", message);
     }
-    
-private:
+
     /**
-     * @brief Private constructor for the Logger class.
-     * 
-     * Prevents direct instantiation of the Logger class and enforces singleton pattern.
+     * @brief IObserver implementation to handle events.
      */
-    Logger() {}
-    
-    /**
-     * @brief Deleted copy constructor.
-     * 
-     * Prevents copying of the Logger instance to maintain singleton behavior.
-     */
-    Logger(const Logger&) = delete;
-    
-    /**
-     * @brief Deleted assignment operator.
-     * 
-     * Prevents assignment of the Logger instance to maintain singleton behavior.
-     */
-    Logger& operator=(const Logger&) = delete;
+    void onEvent(EventType type, const std::string& message) override {
+        switch (type) {
+            case EventType::CombatLog: combatLog(message); break;
+            case EventType::GameLog: gameLog(message); break;
+            case EventType::Warning: warning(message); break;
+            case EventType::Error: error(message); break;
+            case EventType::Info: info(message); break;
+        }
+    }
 };

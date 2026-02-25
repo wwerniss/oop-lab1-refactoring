@@ -7,6 +7,7 @@
  * managing current location tracking, and allowing navigation between locations.
  */
 #include "LocationNode.h"
+#include "../common/IObserver.h"
 #include <memory>
 
 /**
@@ -15,7 +16,7 @@
  * This class handles the entire game world structure, including creating locations,
  * managing current location tracking, and allowing navigation between locations.
  */
-class WorldMap {
+class WorldMap : public ISubject {
 private:
     LocationNode* root;
     LocationNode* currentLocation;
@@ -82,4 +83,12 @@ public:
      * @throws std::runtime_error If there are issues with world destruction
      */
     void destructWorld();
+
+    /**
+     * @brief Overrides ISubject addObserver to also attach to all locations.
+     */
+    void addObserver(IObserver* observer) {
+        ISubject::addObserver(observer);
+        // We will propagate this to nodes on creation
+    }
 };

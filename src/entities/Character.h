@@ -12,6 +12,7 @@
 #include <vector>
 #include <memory>
 #include "../items/Item.h"
+#include "../common/IObserver.h"
 
 // Forward declarations
 class Item;
@@ -23,7 +24,7 @@ class Weapon;
  * This is the base class for all characters in the game including players and enemies.
  * It provides common functionality like health management, inventory handling, and combat.
  */
-class Character {
+class Character : public ISubject {
 protected:
     std::string name;
     int level;
@@ -103,14 +104,7 @@ public:
      */
     void addItem(std::shared_ptr<Item> item);
     
-    /**
-     * @brief Displays the character's status and inventory.
-     * 
-     * Shows the character's stats, equipped weapon, and available items in inventory.
-     * 
-     * @throws std::runtime_error If there are issues with status display
-     */
-    void showStatus() const;
+
     
     // Weapon methods
     
@@ -149,6 +143,13 @@ public:
      * @return The character's name as a string
      */
     std::string getName() const;
+
+    /**
+     * @brief Gets the character's level.
+     * 
+     * @return The character's level as an integer
+     */
+    int getLevel() const { return level; }
     
     /**
      * @brief Gets the character's current health.

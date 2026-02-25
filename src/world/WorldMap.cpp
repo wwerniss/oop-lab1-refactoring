@@ -1,10 +1,10 @@
 #include "WorldMap.h"
 #include "../entities/Enemy.h"
+#include "../entities/EnemyFactory.h"
 #include "../items/HealthPotion.h"
 #include "../items/Sword.h"
 #include "../items/Axe.h"
 #include "../items/Stick.h"
-#include "../common/Logger.h"
 #include <vector>
 #include <algorithm>
 #include <random>
@@ -66,18 +66,18 @@ LocationNode* WorldMap::getCurrentLocation() const {
 void WorldMap::moveLeft() {
     if (currentLocation && currentLocation->getLeft()) {
         currentLocation = currentLocation->getLeft();
-        Logger::getInstance().gameLog("Ви повернули ліворуч, шукаючи щось. Як думаєте, це була гарна ідея?");
+        notifyObservers(EventType::GameLog, "Ви повернули ліворуч, шукаючи щось. Як думаєте, це була гарна ідея?");
     } else {
-        Logger::getInstance().gameLog("Ви спробували піти ліворуч, але натрапили на бездонну прірву. Недовго думаючи, ви вирішили розвернутися.");
+        notifyObservers(EventType::GameLog, "Ви спробували піти ліворуч, але натрапили на бездонну прірву. Недовго думаючи, ви вирішили розвернутися.");
     }
 }
 
 void WorldMap::moveRight() {
     if (currentLocation && currentLocation->getRight()) {
         currentLocation = currentLocation->getRight();
-        Logger::getInstance().gameLog("Ви повернули праворуч, шукаючи щось. Як думаєте, це була гарна ідея?");
+        notifyObservers(EventType::GameLog, "Ви повернули праворуч, шукаючи щось. Як думаєте, це була гарна ідея?");
     } else {
-        Logger::getInstance().gameLog("Ви спробували піти праворуч, але натрапили на бездонну прірву. Недовго думаючи, ви вирішили розвернутися.");
+        notifyObservers(EventType::GameLog, "Ви спробували піти праворуч, але натрапили на бездонну прірву. Недовго думаючи, ви вирішили розвернутися.");
     }
 }
 
@@ -125,16 +125,21 @@ void WorldMap::createWorld() {
         locations[i]->addItem(weaponGenerators[i]());
     }
     
-    forest->addEnemy(std::make_shared<Enemy>("Гоблін", 2, 15, 4, 2, 25));
-    forest->addEnemy(std::make_shared<Enemy>("Вовк", 1, 10, 3, 1, 15));
+    forest->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::Goblin));
+    forest->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::Wolf));
     
-    cave->addEnemy(std::make_shared<Enemy>("Гігантський павук", 3, 20, 5, 3, 35));
-    cave->addEnemy(std::make_shared<Enemy>("Рій кажанів", 1, 5, 2, 0, 10));
+    cave->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::GiantSpider));
+    cave->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::BatSwarm));
     
-    dungeon->addEnemy(std::make_shared<Enemy>("Воїн скелет", 5, 30, 7, 5, 50));
-    dungeon->addEnemy(std::make_shared<Enemy>("Зомбі", 3, 25, 5, 2, 30));
+    dungeon->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::SkeletonWarrior));
+    dungeon->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::Zombie));
     
-    mountains->addEnemy(std::make_shared<Enemy>("Єті", 7, 40, 10, 8, 75));
+    mountains->addEnemy(EnemyFactory::createEnemy(EnemyFactory::EnemyType::Yeti));
+
+    // Register observers for all locations
+    for (auto* loc : locations) {
+        loc->addObserver(observers.empty() ? nullptr : observers.front());
+    }
     
     root = village;
     currentLocation = village;

@@ -1,6 +1,5 @@
 #include "LocationNode.h"
 #include "../entities/Player.h"
-#include "../common/Logger.h"
 
 LocationNode::LocationNode(const std::string& n, const std::string& desc)
     : name(n), description(desc), left(nullptr), right(nullptr) {}
@@ -64,18 +63,18 @@ std::string LocationNode::getDescription() const {
 
 void LocationNode::explore(Player& player) {
     if (!enemies.empty()) {
-        Logger::getInstance().combatLog("Ви озирнулися навколо і помітили " + std::to_string(enemies.size()) + " монстрів.");
+        notifyObservers(EventType::CombatLog, "Ви озирнулися навколо і помітили " + std::to_string(enemies.size()) + " монстрів.");
         for (const auto& enemy : enemies) {
-            Logger::getInstance().combatLog("- " + enemy->getName() + " (Lvl " + std::to_string(enemy->getHealth()) + "/" + std::to_string(enemy->getMaxHealth()) + ")");
+            notifyObservers(EventType::CombatLog, "- " + enemy->getName() + " (Lvl " + std::to_string(enemy->getHealth()) + "/" + std::to_string(enemy->getMaxHealth()) + ")");
         }
     } else if (!items.empty()) {
-        Logger::getInstance().gameLog("Ви озирнулися навколо та знайшли предмети:");
+        notifyObservers(EventType::GameLog, "Ви озирнулися навколо та знайшли предмети:");
         for (const auto& item : items) {
             player.addItem(item);
-            Logger::getInstance().gameLog("- " + item->getName() + " (" + item->getDescription() + ")");
+            notifyObservers(EventType::GameLog, "- " + item->getName() + " (" + item->getDescription() + ")");
         }
         items.clear();
     } else {
-        Logger::getInstance().gameLog("Це місце здається порожнім... Нічого цікавого.");
+        notifyObservers(EventType::GameLog, "Це місце здається порожнім... Нічого цікавого.");
     }
 }

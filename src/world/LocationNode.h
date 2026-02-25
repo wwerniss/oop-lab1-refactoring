@@ -12,6 +12,7 @@
 #include <memory>
 #include "../entities/Enemy.h"
 #include "../items/Item.h"
+#include "../common/IObserver.h"
 
 // Forward declarations
 class Player;
@@ -23,7 +24,7 @@ class Player;
  * villages, or dungeons. Each location contains enemies, items, and connections
  * to other locations in the world map.
  */
-class LocationNode {
+class LocationNode : public ISubject {
 private:
     std::string name;
     std::string description;
