@@ -1,0 +1,37 @@
+@startuml
+title Timing Diagram - Combat Turn TO-BE
+
+robust "CombatState" as CS
+robust "Player" as P
+robust "Enemy" as E
+concise "UI" as UI
+
+@0
+CS is WaitingInput
+P is Ready
+E is Ready
+UI is ShowCombatStatus
+
+@1
+UI is ReadCommand
+CS is HandleInput
+
+@2
+P is Attacking
+E is TakingDamage
+CS is ResolvePlayerAction
+
+@3
+CS is PublishCombatEvent
+UI is ShowMessage
+
+@4
+E is Attacking
+P is TakingDamage
+CS is ResolveEnemyAction
+
+@5
+CS is CheckStateTransition
+UI is RefreshCombatStatus
+
+@enduml

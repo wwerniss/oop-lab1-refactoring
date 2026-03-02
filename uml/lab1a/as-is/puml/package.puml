@@ -1,0 +1,48 @@
+@startuml
+title Package Diagram - Blazing Darkness AS-IS
+
+skinparam packageStyle rectangle
+
+package "common" as common {
+  class Logger
+  class Utils
+}
+
+package "items" as items {
+  class Item
+  class Weapon
+  class Sword
+  class Axe
+  class Stick
+  class HealthPotion
+}
+
+package "entities" as entities {
+  class Character
+  class Player
+  class Enemy
+}
+
+package "world" as world {
+  class WorldMap
+  class LocationNode
+}
+
+package "game" as game {
+  class Game
+}
+
+game ..> common
+game ..> entities
+game ..> world
+
+world ..> entities
+world ..> items
+world ..> common
+
+entities ..> items
+entities ..> common
+
+items ..> entities
+
+@enduml

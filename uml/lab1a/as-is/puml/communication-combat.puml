@@ -1,0 +1,26 @@
+@startuml
+title Communication Diagram - Combat AS-IS
+
+object "player : Player" as player
+object "game : Game" as game
+object "location : LocationNode" as location
+object "enemy : Enemy" as enemy
+object "logger : Logger" as logger
+object "utils : Utils" as utils
+
+player --> game : 1: press 'A'
+game --> location : 2: getEnemies()
+game --> enemy : 3: attackTarget(enemy)
+enemy --> enemy : 4: takeDamage(amount)
+game --> logger : 5: combatLog(attack result)
+
+game --> enemy : 6: isAlive()
+game --> player : 7: gainExperience(exp) [if defeated]
+game --> location : 8: removeEnemy(index) [if defeated]
+
+game --> utils : 9: sleep(1000)
+
+enemy --> player : 10: attackTarget(player) [enemy turn]
+game --> logger : 11: combatLog(counterattack result)
+
+@enduml

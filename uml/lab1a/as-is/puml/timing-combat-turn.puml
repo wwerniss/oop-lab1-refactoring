@@ -1,0 +1,36 @@
+@startuml
+title Timing Diagram - One Combat Turn AS-IS
+
+robust "Player" as P
+robust "Enemy" as E
+concise "Turn" as T
+
+@0
+P is Waiting
+E is Waiting
+T is Start
+
+@1
+P is ChoosingAction
+T is PlayerTurn
+
+@2
+P is Attacking
+E is TakingDamage
+
+@3
+P is Waiting
+E is CheckingAlive
+T is ResolvePlayerAction
+
+@4
+E is Attacking
+P is TakingDamage
+T is EnemyTurn
+
+@5
+P is Waiting
+E is Waiting
+T is EndTurn
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+title Interaction Overview Diagram - Main Game Loop AS-IS
+
+start
+
+:clearScreen();
+:showTitle();
+:Input player name;
+:Create Player;
+:Create WorldMap;
+:Set raw mode;
+
+repeat
+  :Get current location;
+  :Show location description;
+
+  if (Command?) then (E)
+    :explore(player);
+  elseif (F)
+    :handleCombat();
+  elseif (S)
+    :showStatus();
+  elseif (L)
+    :moveLeft();
+  elseif (R)
+    :moveRight();
+  elseif (H)
+    :showHelp();
+  elseif (Q)
+    :Exit loop;
+    break
+  else
+    :warning / ignore;
+  endif
+
+repeat while (isRunning == true)
+
+stop
+@enduml

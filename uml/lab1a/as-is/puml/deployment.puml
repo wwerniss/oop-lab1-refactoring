@@ -1,0 +1,27 @@
+@startuml
+title Deployment Diagram - Blazing Darkness AS-IS
+
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+actor "Player" as User
+
+node "User Computer" as PC {
+  node "Terminal / Console" as Terminal {
+    artifact "BlazingDarkness.exe" as EXE
+    artifact "stdout / stdin" as IO
+  }
+
+  folder "Local Runtime Environment" as Runtime {
+    artifact "terminal settings\n(raw mode, VT mode)" as TermState
+    artifact "game session state\n(in memory)" as Session
+  }
+}
+
+User --> Terminal : interacts
+Terminal --> EXE : starts
+EXE --> IO : reads input / writes output
+EXE --> TermState : setRawMode(), enableVTMode()
+EXE --> Session : updates player/world state
+
+@enduml

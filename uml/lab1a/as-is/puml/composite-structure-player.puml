@@ -1,0 +1,42 @@
+@startuml
+title Composite Structure Diagram - Player Internals AS-IS
+
+skinparam classAttributeIconSize 0
+
+class Player {
+  -experience : int
+  -experienceToNextLevel : int
+  +gainExperience(amount:int)
+  +levelUp()
+  +useItem(index:size_t)
+}
+
+class "Character Core" as CharacterCore {
+  name : string
+  level : int
+  health : int
+  maxHealth : int
+  baseAttack : int
+  attack : int
+  defense : int
+}
+
+class "Inventory" as Inventory {
+  vector<shared_ptr<Item>>
+}
+
+class "Equipped Weapon" as EquippedWeapon {
+  shared_ptr<Weapon>
+}
+
+class "Progression Logic" as Progression {
+  experience : int
+  nextLevel : int
+}
+
+Player *-- CharacterCore
+Player *-- Inventory
+Player *-- EquippedWeapon
+Player *-- Progression
+
+@enduml

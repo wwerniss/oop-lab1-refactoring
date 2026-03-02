@@ -1,0 +1,51 @@
+@startuml
+title Composite Structure Diagram - Game Internals TO-BE
+
+skinparam classAttributeIconSize 0
+
+class Game {
+  -isRunning : bool
+  -hasSlept : bool
+  -player : unique_ptr<Player>
+  -world : unique_ptr<WorldMap>
+  -ui : shared_ptr<IUserInterface>
+  -currentState : shared_ptr<IGameState>
+  +changeState(state)
+  +getPlayer()
+  +getWorld()
+  +getUI()
+  +run()
+}
+
+interface IUserInterface
+class ConsoleUI
+
+interface IGameState {
+  +onEnter(Game&)
+  +update(Game&)
+  +handleInput(Game&, char)
+}
+
+class ExplorationState
+class CombatState {
+  -currentEnemies : vector<shared_ptr<Enemy>>
+  -isPlayerTurn : bool
+}
+
+class Player
+class WorldMap
+class Logger
+
+Game *-- Player
+Game *-- WorldMap
+Game *-- IUserInterface
+Game *-- IGameState
+
+IUserInterface <|.. ConsoleUI
+IGameState <|.. ExplorationState
+IGameState <|.. CombatState
+
+WorldMap ..> Logger : addObserver()
+Player ..> Logger : addObserver()
+
+@enduml

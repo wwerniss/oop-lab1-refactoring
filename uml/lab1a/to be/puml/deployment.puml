@@ -1,0 +1,44 @@
+@startuml
+title Deployment Diagram - Blazing Darkness TO-BE
+
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+actor "Player" as User
+
+node "User Computer" as PC {
+  node "Terminal / Console" as Terminal {
+    artifact "BlazingDarkness.exe" as EXE
+  }
+
+  node "Application Runtime" as Runtime {
+    component "Game" as GameCore
+    component "State Layer\n(IGameState, ExplorationState, CombatState)" as StateLayer
+    component "UI Layer\n(IUserInterface, ConsoleUI)" as UILayer
+    component "Observer Layer\n(ISubject, IObserver, Logger)" as ObserverLayer
+    component "World Layer\n(WorldMap, LocationNode)" as WorldLayer
+    component "Factory Layer\n(EnemyFactory)" as FactoryLayer
+  }
+
+  folder "In-Memory Session" as Session {
+    artifact "Player state" as PlayerState
+    artifact "World state" as WorldState
+    artifact "Current state object" as CurrentState
+  }
+}
+
+User --> Terminal : interacts
+Terminal --> EXE : starts
+
+EXE --> GameCore
+GameCore --> StateLayer
+GameCore --> UILayer
+GameCore --> ObserverLayer
+GameCore --> WorldLayer
+WorldLayer --> FactoryLayer
+
+GameCore --> PlayerState : updates
+WorldLayer --> WorldState : updates
+StateLayer --> CurrentState : switches
+
+@enduml

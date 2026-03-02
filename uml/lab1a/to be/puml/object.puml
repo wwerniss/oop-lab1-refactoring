@@ -1,0 +1,45 @@
+@startuml
+title Object Diagram - Runtime Snapshot TO-BE
+
+object "game : Game" as game {
+  isRunning = true
+  hasSlept = false
+}
+
+object "player : Player" as player {
+  name = "Hero"
+  level = 2
+  health = 24
+  experience = 40
+}
+
+object "world : WorldMap" as world
+object "location : LocationNode" as location {
+  name = "Темний ліс"
+}
+
+object "state : ExplorationState" as state
+object "ui : ConsoleUI" as ui
+object "logger : Logger" as logger
+object "factory : EnemyFactory" as factory
+
+object "enemy : Enemy" as enemy {
+  name = "Goblin"
+  health = 15
+  experienceReward = 25
+}
+
+game *-- player
+game *-- world
+game *-- state
+game *-- ui
+
+world --> location : currentLocation
+world --> factory : createEnemy()
+location o-- enemy
+
+logger --> ui : renders via UI
+world ..> logger : notifyObservers(...)
+location ..> logger : notifyObservers(...)
+
+@enduml

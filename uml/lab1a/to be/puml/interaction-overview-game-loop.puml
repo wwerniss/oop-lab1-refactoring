@@ -1,0 +1,27 @@
+@startuml
+title Interaction Overview Diagram - Main Game Loop TO-BE
+
+start
+
+:Create ConsoleUI;
+:Create Player;
+:Create WorldMap;
+:Set currentState = ExplorationState;
+:currentState.onEnter(game);
+
+repeat
+  :ui.clearScreen();
+  :currentState.update(game);
+  :input = ui.getCharInputNonBlocking();
+  :currentState.handleInput(game, input);
+
+  if (State changed?) then (yes)
+    :newState.onEnter(game);
+  endif
+
+repeat while (isRunning == true)
+
+:ui.showGameOver() [if player dead];
+stop
+
+@enduml

@@ -1,0 +1,62 @@
+@startuml
+title Package Diagram - Blazing Darkness TO-BE
+
+skinparam packageStyle rectangle
+
+package "game" as game {
+  class Game
+}
+
+package "states" as states {
+  interface IGameState
+  class ExplorationState
+  class CombatState
+}
+
+package "common" as common {
+  interface IUserInterface
+  class ConsoleUI
+  interface IObserver
+  interface ISubject
+  class Logger
+  class Utils
+}
+
+package "entities" as entities {
+  class Character
+  class Player
+  class Enemy
+  class EnemyFactory
+}
+
+package "world" as world {
+  class WorldMap
+  class LocationNode
+}
+
+package "items" as items {
+  class Item
+  class Weapon
+  class HealthPotion
+}
+
+game ..> states
+game ..> common
+game ..> entities
+game ..> world
+
+states ..> game
+states ..> common
+states ..> entities
+states ..> world
+
+world ..> entities
+world ..> items
+world ..> common
+
+entities ..> items
+entities ..> common
+
+common ..> entities
+
+@enduml

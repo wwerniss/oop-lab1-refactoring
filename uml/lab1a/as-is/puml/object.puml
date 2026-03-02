@@ -1,0 +1,55 @@
+@startuml
+title Object Diagram - Current Runtime Snapshot AS-IS
+
+object "game : Game" as game {
+  isRunning = true
+  hasSlept = false
+}
+
+object "player : Player" as player {
+  name = "Герой"
+  level = 1
+  health = 20
+  maxHealth = 20
+  attack = 5
+  defense = 3
+  experience = 0
+  experienceToNextLevel = 100
+}
+
+object "world : WorldMap" as world
+
+object "village : LocationNode" as village {
+  name = "Село"
+}
+
+object "forest : LocationNode" as forest {
+  name = "Темний ліс"
+}
+
+object "goblin : Enemy" as goblin {
+  name = "Гоблін"
+  level = 2
+  health = 15
+  experienceReward = 25
+}
+
+object "sword : Sword" as sword {
+  damage = 15
+}
+
+object "potion : HealthPotion" as potion {
+  healAmount = 30
+}
+
+game *-- player
+game *-- world
+
+world --> village : currentLocation
+village --> forest : left
+
+forest o-- goblin
+player o-- sword : equippedWeapon
+player o-- potion : inventory
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+title Communication Diagram - Combat Flow TO-BE
+
+object "player : Player" as player
+object "combatState : CombatState" as combat
+object "game : Game" as game
+object "ui : IUserInterface" as ui
+object "enemy : Enemy" as enemy
+object "logger : Logger" as logger
+
+player --> combat : 1: attack input
+combat --> game : 2: getPlayer()
+combat --> game : 3: getUI()
+combat --> ui : 4: showCombatStatus(player, enemies)
+combat --> enemy : 5: attackTarget(player) / player attacks enemy
+enemy --> enemy : 6: takeDamage(amount)
+
+combat --> logger : 7: onEvent(CombatLog, ...)
+combat --> enemy : 8: isAlive()
+
+combat --> player : 9: gainExperience(exp) [if defeated]
+combat --> ui : 10: showMessage(result)
+
+enemy --> player : 11: attackTarget(player) [enemy turn]
+combat --> logger : 12: onEvent(CombatLog, counterattack)
+
+@enduml
