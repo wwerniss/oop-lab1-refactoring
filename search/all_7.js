@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fields_0',['Classes and Their Fields',['../md_README.html#autotoc_md85',1,'']]],
-  ['flow_1',['flow',['../md_GLOSSARY.html#autotoc_md65',1,'Core / Game flow'],['../md_docs_2documentation__en.html#autotoc_md24',1,'Data Flow']]]
+  ['8_20наскільки_20зручно_20було_20використовувати_20інструмент_20чи_20не_20треба_20було_20виконувати_20багато_20надлишкових_20дій_0',['8. Наскільки зручно було використовувати інструмент, чи не треба було виконувати багато надлишкових дій?',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md116',1,'']]]
 ];

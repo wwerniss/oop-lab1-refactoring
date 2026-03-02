@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['level_0',['level',['../classCharacter.html#af15a478fe650b87f59cbe5d071697307',1,'Character']]],
-  ['levelup_1',['levelUp',['../classPlayer.html#a5bda3bad89f797546360636deb154fbb',1,'Player']]],
-  ['license_2',['License',['../md_README.html#autotoc_md96',1,'']]],
-  ['limitations_3',['Known Limitations',['../md_docs_2documentation__en.html#autotoc_md28',1,'']]],
-  ['locationnode_4',['locationnode',['../classLocationNode.html',1,'LocationNode'],['../classLocationNode.html#a0e9490b1974a309308550667d90440ce',1,'LocationNode::LocationNode()'],['../md_docs_2documentation__en.html#autotoc_md8',1,'LocationNode'],['../md_docs_2documentation__ua.html#autotoc_md37',1,'LocationNode']]],
-  ['locationnode_20class_5',['LocationNode Class',['../md_README.html#autotoc_md91',1,'']]],
-  ['locationnode_2ecpp_6',['LocationNode.cpp',['../LocationNode_8cpp.html',1,'']]],
-  ['locationnode_2eh_7',['LocationNode.h',['../LocationNode_8h.html',1,'']]],
-  ['log_8',['log',['../classLogger.html#ac0f4f6c60b1531ba80f3a7086e38e1ed',1,'Logger']]],
-  ['logger_9',['Logger',['../classLogger.html',1,'']]],
-  ['logger_2eh_10',['Logger.h',['../Logger_8h.html',1,'']]],
-  ['logger_5fexample_2ecpp_11',['logger_example.cpp',['../logger__example_8cpp.html',1,'']]]
+  ['damage_0',['damage',['../classWeapon.html#abb463127151d807804c556ddbd767e18',1,'Weapon']]],
+  ['darkness_1',['Blazing Darkness',['../md_README.html',1,'']]],
+  ['darkness_20технічна_20документація_2',['Blazing Darkness - Технічна документація',['../md_docs_2documentation__ua.html',1,'']]],
+  ['darkness_20technical_20documentation_3',['Blazing Darkness - Technical Documentation',['../md_docs_2documentation__en.html',1,'']]],
+  ['data_20flow_4',['Data Flow',['../md_docs_2documentation__en.html#autotoc_md24',1,'']]],
+  ['defense_5',['defense',['../classCharacter.html#afbcf2bebcbe06be8c99fab9d2abfecf3',1,'Character']]],
+  ['dependencies_6',['Dependencies',['../md_docs_2documentation__en.html#autotoc_md23',1,'']]],
+  ['description_7',['description',['../classItem.html#a7417563f4b149d5e531cea1e993f66f6',1,'Item']]],
+  ['design_20patterns_8',['Design Patterns',['../md_docs_2documentation__en.html#autotoc_md22',1,'']]],
+  ['destructworld_9',['destructWorld',['../classWorldMap.html#a9ddec86f64994fc531bc7b2741ef195a',1,'WorldMap']]],
+  ['detailed_20component_20documentation_10',['Detailed Component Documentation',['../md_docs_2documentation__en.html#autotoc_md4',1,'']]],
+  ['details_11',['Technical Implementation Details',['../md_docs_2documentation__en.html#autotoc_md20',1,'']]],
+  ['development_12',['Development',['../md_README.html#autotoc_md74',1,'']]],
+  ['diagrams_13',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]],
+  ['documentation_14',['documentation',['../md_docs_2documentation__en.html',1,'Blazing Darkness - Technical Documentation'],['../md_docs_2documentation__en.html#autotoc_md4',1,'Detailed Component Documentation'],['../md_README.html#autotoc_md78',1,'Documentation']]],
+  ['documentation_5fen_2emd_15',['documentation_en.md',['../documentation__en_8md.html',1,'']]],
+  ['documentation_5fua_2emd_16',['documentation_ua.md',['../documentation__ua_8md.html',1,'']]],
+  ['drawfooter_17',['drawFooter',['../classUtils.html#a94f5198a4cdfeb8a479cfe34a84b81b8',1,'Utils']]]
 ];

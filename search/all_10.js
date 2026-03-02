@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['patterns_0',['Design Patterns',['../md_docs_2documentation__en.html#autotoc_md22',1,'']]],
-  ['peacefulcharacter_1',['PeacefulCharacter',['../classPeacefulCharacter.html',1,'']]],
-  ['performance_2',['Продуктивність (Performance)',['../md_SUMMARY.html#autotoc_md100',1,'']]],
-  ['performance_20considerations_3',['Performance Considerations',['../md_docs_2documentation__en.html#autotoc_md26',1,'']]],
-  ['plantuml_4',['UML Tool Report: PlantUML',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html',1,'']]],
-  ['player_5',['player',['../classPlayer.html',1,'Player'],['../md_docs_2documentation__en.html#autotoc_md11',1,'Player'],['../classPlayer.html#a45fa04a2a4ff9235e6c100b7c6ab232a',1,'Player::Player()']]],
-  ['player_20гравець_6',['Player (Гравець)',['../md_docs_2documentation__ua.html#autotoc_md40',1,'']]],
-  ['player_20class_7',['Player Class',['../md_README.html#autotoc_md89',1,'']]],
-  ['player_2ecpp_8',['Player.cpp',['../Player_8cpp.html',1,'']]],
-  ['player_2eh_9',['Player.h',['../Player_8h.html',1,'']]],
-  ['player_5fexample_2ecpp_10',['player_example.cpp',['../player__example_8cpp.html',1,'']]],
-  ['points_11',['Extension Points',['../md_docs_2documentation__en.html#autotoc_md27',1,'']]],
-  ['prerequisites_12',['Prerequisites',['../md_README.html#autotoc_md75',1,'']]],
-  ['principles_13',['Паттерни проектування (GoF Principles)',['../md_SUMMARY.html#autotoc_md104',1,'']]],
-  ['project_20structure_14',['Project Structure',['../md_README.html#autotoc_md82',1,'']]],
-  ['pros_15',['Pros',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md113',1,'']]]
+  ['handleinput_0',['handleinput',['../classCombatState.html#a4281d6662927a92a30518f7c9c020988',1,'CombatState::handleInput()'],['../classExplorationState.html#ab0df957c441cf53138602d1876f814dc',1,'ExplorationState::handleInput()'],['../classIGameState.html#adc4f558f249d3487ed30ccaebca36d0a',1,'IGameState::handleInput()']]],
+  ['handling_1',['Error Handling',['../md_docs_2documentation__en.html#autotoc_md25',1,'']]],
+  ['hasenemies_2',['hasEnemies',['../classLocationNode.html#ab23cfe57c9b7b0152b571d56ca17476d',1,'LocationNode']]],
+  ['hasweaponequipped_3',['hasWeaponEquipped',['../classCharacter.html#af8f8f7f89d8b963d0eff1325ba0c2b4b',1,'Character']]],
+  ['heal_4',['heal',['../classCharacter.html#acadeeda3aa196b336825944e246b443a',1,'Character']]],
+  ['health_5',['health',['../classCharacter.html#a69c649b8febd22729e6edafb27e69aeb',1,'Character']]],
+  ['healthpotion_6',['healthpotion',['../classHealthPotion.html',1,'HealthPotion'],['../classHealthPotion.html#a99e942956f7f1e07dd13c46daae08713',1,'HealthPotion::HealthPotion()'],['../md_docs_2documentation__en.html#autotoc_md15',1,'HealthPotion'],['../md_docs_2documentation__ua.html#autotoc_md44',1,'HealthPotion']]],
+  ['healthpotion_2ecpp_7',['HealthPotion.cpp',['../HealthPotion_8cpp.html',1,'']]],
+  ['healthpotion_2eh_8',['HealthPotion.h',['../HealthPotion_8h.html',1,'']]],
+  ['hierarchy_9',['Inheritance Hierarchy',['../md_README.html#autotoc_md94',1,'']]]
 ];

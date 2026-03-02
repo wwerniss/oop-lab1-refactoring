@@ -1,18 +1,16 @@
 var searchData=
 [
-  ['uml_20notation_20used_20in_20diagrams_0',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]],
-  ['uml_20tool_20report_3a_20plantuml_1',['UML Tool Report: PlantUML',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html',1,'']]],
-  ['uml_5ftool_5freport_2emd_2',['UML_TOOL_REPORT.md',['../UML__TOOL__REPORT_8md.html',1,'']]],
-  ['unequipweapon_3',['unequipWeapon',['../classCharacter.html#a378012b9cace6b6f66328fc0b8f8d002',1,'Character']]],
-  ['update_4',['update',['../classCombatState.html#ab521f8a29f7396124ee55d5306010b24',1,'CombatState::update()'],['../classExplorationState.html#a4b9d61c57d8e2c7d451578511360d2f8',1,'ExplorationState::update()'],['../classIGameState.html#a2d858b7edce8a502013694cad0d82682',1,'IGameState::update()']]],
-  ['usagemessage_5',['usageMessage',['../classItem.html#a0e362cf89cadb8e97a96b35bf3e124fb',1,'Item']]],
-  ['use_6',['use',['../classWeapon.html#a847b022365a474274ad13dcf91430ae4',1,'Weapon::use()'],['../classHealthPotion.html#a772e4095a4aa1b2d67e9164cdcb69321',1,'HealthPotion::use()'],['../classItem.html#a986a36156b31f9b2189189ce21fa8ab9',1,'Item::use()']]],
-  ['used_7',['Supported diagrams I used',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md111',1,'']]],
-  ['used_20in_20diagrams_8',['UML notation used in diagrams',['../md_GLOSSARY.html#autotoc_md71',1,'']]],
-  ['useitem_9',['useItem',['../classPlayer.html#a2d8f89c71ed51550bc27071ecfae3f43',1,'Player']]],
-  ['using_10',['Resources that we using',['../md_README.html#autotoc_md83',1,'']]],
-  ['utils_11',['Utils',['../classUtils.html',1,'']]],
-  ['utils_2ecpp_12',['Utils.cpp',['../Utils_8cpp.html',1,'']]],
-  ['utils_2eh_13',['Utils.h',['../Utils_8h.html',1,'']]],
-  ['utils_5fexample_2ecpp_14',['utils_example.cpp',['../utils__example_8cpp.html',1,'']]]
+  ['main_0',['main',['../tests_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../utils__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;utils_example.cpp'],['../player__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;player_example.cpp'],['../logger__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;logger_example.cpp'],['../item__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;item_example.cpp'],['../game__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;game_example.cpp'],['../enemy__example_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;enemy_example.cpp']]],
+  ['main_20components_1',['Main Components',['../md_docs_2documentation__en.html#autotoc_md3',1,'']]],
+  ['main_2ecpp_2',['main.cpp',['../tests_2main_8cpp.html',1,'(Global Namespace)'],['../main_8cpp.html',1,'(Global Namespace)']]],
+  ['management_3',['management',['../md_docs_2documentation__en.html#autotoc_md19',1,'Inventory Management'],['../md_docs_2documentation__en.html#autotoc_md21',1,'Memory Management']]],
+  ['maxhealth_4',['maxHealth',['../classCharacter.html#a2f81fbc35d2866eea0f6530461d961e7',1,'Character']]],
+  ['mechanics_5',['mechanics',['../md_docs_2documentation__en.html#autotoc_md16',1,'Game Mechanics'],['../md_docs_2mechanics__en.html',1,'Game Mechanics']]],
+  ['mechanics_5fen_2emd_6',['mechanics_en.md',['../mechanics__en_8md.html',1,'']]],
+  ['mechanics_5fua_2emd_7',['mechanics_ua.md',['../mechanics__ua_8md.html',1,'']]],
+  ['memory_20management_8',['Memory Management',['../md_docs_2documentation__en.html#autotoc_md21',1,'']]],
+  ['methods_9',['Key Non-trivial Methods',['../md_README.html#autotoc_md86',1,'']]],
+  ['movecursor_10',['moveCursor',['../classUtils.html#aeb071b3276113d78844bab86d743a5f9',1,'Utils']]],
+  ['moveleft_11',['moveLeft',['../classWorldMap.html#aa091b65c6814a6567cc9a88a4cf07dd0',1,'WorldMap']]],
+  ['moveright_12',['moveRight',['../classWorldMap.html#a92e36760d89fe07159083b4f39a37911',1,'WorldMap']]]
 ];

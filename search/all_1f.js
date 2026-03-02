@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['загальні_20принципи_0',['Більш загальні принципи',['../md_SUMMARY.html#autotoc_md105',1,'']]],
-  ['залежності_1',['Залежності',['../md_docs_2documentation__ua.html#autotoc_md52',1,'']]],
-  ['звіт_20про_20рефакторинг_2',['Звіт про рефакторинг',['../md_SUMMARY.html',1,'']]]
+  ['zombie_0',['Zombie',['../classEnemyFactory.html#a34bb322e7fb3fc1c4b3b7c14839b06eaa7c3d115a77fd8d39fbbc0bb2bf54cfc7',1,'EnemyFactory']]]
 ];

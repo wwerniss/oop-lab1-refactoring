@@ -1,30 +1,5 @@
 var searchData=
 [
-  ['sethasslept_0',['setHasSlept',['../classGame.html#a9e5b015449194dc7765d11c684d49a37',1,'Game']]],
-  ['setisrunning_1',['setIsRunning',['../classGame.html#a4de24fb24bf94c187848d9038322a910',1,'Game']]],
-  ['setleft_2',['setLeft',['../classLocationNode.html#a5ad3d3a6cc24f7e0e743f5c62893026c',1,'LocationNode']]],
-  ['setrawmode_3',['setRawMode',['../classUtils.html#a08d5e322f7e7b990a04e0a379ffa8dc5',1,'Utils']]],
-  ['setright_4',['setRight',['../classLocationNode.html#a81507314903772ba1d09c997315e90e0',1,'LocationNode']]],
-  ['setui_5',['setUI',['../classLogger.html#a4018f7a58d85b1549be9655c75571233',1,'Logger']]],
-  ['showcharacterstatus_6',['showcharacterstatus',['../classConsoleUI.html#a36592cbbb47cc60336ffd2bd7685bd43',1,'ConsoleUI::showCharacterStatus()'],['../classIUserInterface.html#abe25db2f037c8f10979b509299d66bcf',1,'IUserInterface::showCharacterStatus(const Character &amp;character)=0']]],
-  ['showcombatstatus_7',['showcombatstatus',['../classIUserInterface.html#a7470c832d5a9218d13fb5af8217b70cf',1,'IUserInterface::showCombatStatus()'],['../classConsoleUI.html#aede2c6325e694258985adb02e7c1a484',1,'ConsoleUI::showCombatStatus()']]],
-  ['showgameover_8',['showgameover',['../classIUserInterface.html#a6daf7e10cf24993efdf70d89ab84c040',1,'IUserInterface::showGameOver()'],['../classConsoleUI.html#adb8e0282eed0e7a8d3b757c338277075',1,'ConsoleUI::showGameOver()']]],
-  ['showhelp_9',['showhelp',['../classIUserInterface.html#abed4b563a241b052cb61861feb2f2d8c',1,'IUserInterface::showHelp()'],['../classConsoleUI.html#ae4d658b9b7f9c9fdc929776fe6cb875d',1,'ConsoleUI::showHelp()']]],
-  ['showmessage_10',['showmessage',['../classIUserInterface.html#ad90911c2b95b7b7e1d38a25917b83d0b',1,'IUserInterface::showMessage()'],['../classConsoleUI.html#af0b2a411e995eb2fddbc659f19d13c15',1,'ConsoleUI::showMessage(const std::string &amp;message) override']]],
-  ['showtitle_11',['showtitle',['../classConsoleUI.html#a0328e04d2309a8cbd1c3acc799643749',1,'ConsoleUI::showTitle()'],['../classIUserInterface.html#a74dc0abf98c1286396aca0f4d23eddc1',1,'IUserInterface::showTitle()']]],
-  ['skeletonwarrior_12',['SkeletonWarrior',['../classEnemyFactory.html#a34bb322e7fb3fc1c4b3b7c14839b06eaa32d39f210a4c8b3b9f513fb6cf5b8148',1,'EnemyFactory']]],
-  ['sleep_13',['sleep',['../classUtils.html#a76cbb6686c241175ae61359b84737ddf',1,'Utils']]],
-  ['solid_20принципи_14',['SOLID Принципи',['../md_SUMMARY.html#autotoc_md103',1,'']]],
-  ['stick_15',['stick',['../classStick.html#a52dabcec8665749c50dc8ddaf4347060',1,'Stick::Stick()'],['../classStick.html',1,'Stick']]],
-  ['stick_2ecpp_16',['Stick.cpp',['../Stick_8cpp.html',1,'']]],
-  ['stick_2eh_17',['Stick.h',['../Stick_8h.html',1,'']]],
-  ['structure_18',['Project Structure',['../md_README.html#autotoc_md82',1,'']]],
-  ['structure_20summary_19',['Codebase Structure Summary',['../md_README.html#autotoc_md95',1,'']]],
-  ['summary_20',['Codebase Structure Summary',['../md_README.html#autotoc_md95',1,'']]],
-  ['summary_2emd_21',['SUMMARY.md',['../SUMMARY_8md.html',1,'']]],
-  ['supported_20diagrams_20i_20used_22',['Supported diagrams I used',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md111',1,'']]],
-  ['sword_23',['sword',['../classSword.html#af33284e40825ec8ddccd01fa5833be36',1,'Sword::Sword()'],['../classSword.html',1,'Sword']]],
-  ['sword_2ecpp_24',['Sword.cpp',['../Sword_8cpp.html',1,'']]],
-  ['sword_2eh_25',['Sword.h',['../Sword_8h.html',1,'']]],
-  ['system_26',['system',['../md_docs_2documentation__en.html#autotoc_md17',1,'Combat System'],['../md_docs_2mechanics__en.html#autotoc_md60',1,'Combat System'],['../md_docs_2documentation__en.html#autotoc_md9',1,'Entity System'],['../md_docs_2documentation__en.html#autotoc_md13',1,'Item System'],['../md_docs_2documentation__en.html#autotoc_md6',1,'World System']]]
+  ['key_20non_20trivial_20methods_0',['Key Non-trivial Methods',['../md_README.html#autotoc_md86',1,'']]],
+  ['known_20limitations_1',['Known Limitations',['../md_docs_2documentation__en.html#autotoc_md28',1,'']]]
 ];

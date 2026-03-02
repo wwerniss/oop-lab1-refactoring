@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['takedamage_0',['takeDamage',['../classCharacter.html#ac1023932374c206258152934c6154669',1,'Character']]],
-  ['technical_1',['Common / Technical',['../md_GLOSSARY.html#autotoc_md70',1,'']]],
-  ['technical_20documentation_2',['Blazing Darkness - Technical Documentation',['../md_docs_2documentation__en.html',1,'']]],
-  ['technical_20implementation_20details_3',['Technical Implementation Details',['../md_docs_2documentation__en.html#autotoc_md20',1,'']]],
-  ['test_4',['test',['../EntitiesTests_8cpp.html#acfd150a53ac7448800bcf36bb07aa88b',1,'TEST(EntitiesTests, PlayerInitialization):&#160;EntitiesTests.cpp'],['../WorldTests_8cpp.html#af94d1b829a9689fc79e5078b53646414',1,'TEST(WorldTests, WorldMapNavigationEdgeCases):&#160;WorldTests.cpp'],['../WorldTests_8cpp.html#a6c7dd2928e8fa525082e6f3a055d6b55',1,'TEST(WorldTests, TestWorldCleanup):&#160;WorldTests.cpp'],['../WorldTests_8cpp.html#a98a89287aae64ed1d697b842c2be2fc8',1,'TEST(WorldTests, TestLocationConnections):&#160;WorldTests.cpp'],['../WorldTests_8cpp.html#ae356b4f818013f8dc89f0c0cb2aed9a9',1,'TEST(WorldTests, EnemyManagement):&#160;WorldTests.cpp'],['../WorldTests_8cpp.html#ab1f192a570173e78d0a2f30d97700294',1,'TEST(WorldTests, TestWorldMapNavigation):&#160;WorldTests.cpp'],['../WorldTests_8cpp.html#adc9e166b28fdbceef16d40624b4195bc',1,'TEST(WorldTests, TestWorldMapInitialization):&#160;WorldTests.cpp'],['../ItemsTests_8cpp.html#a223dc98101ca7125bf25f570cb25a1a2',1,'TEST(ItemsTests, WeaponAndHealthPotionCombined):&#160;ItemsTests.cpp'],['../ItemsTests_8cpp.html#a9492daacdef4db5aa20f6fcd66c9bdac',1,'TEST(ItemsTests, WeaponNegativeDamage):&#160;ItemsTests.cpp'],['../ItemsTests_8cpp.html#a0737020669da1421628c629eda6d6c8e',1,'TEST(ItemsTests, HealthPotionAlreadyFullHealth):&#160;ItemsTests.cpp'],['../ItemsTests_8cpp.html#ac26af5f52893ccb51e7ef6388170c193',1,'TEST(ItemsTests, WeaponUsageEdgeCases):&#160;ItemsTests.cpp'],['../EntitiesTests_8cpp.html#a28a9043f81b5354388ec84e64e3094a3',1,'TEST(EntitiesTests, EnemyDamageWithValidDamage):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#ad2260a95337325a779cacf4aa9545713',1,'TEST(EntitiesTests, EnemyDamageMultipleAttacks):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#aa1bb20cbeb7269db57c14986238192f6',1,'TEST(EntitiesTests, PlayerDamageWithNegativeValues):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#a2fa9321974c591e1e6b5552bccaef02b',1,'TEST(EntitiesTests, PlayerHealingExceedsMaxHealth):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#ad2cbabaf2a1c1a510c65a6e52d14929c',1,'TEST(EntitiesTests, PlayerDeathExactCondition):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#a08b6500845fc78dd8f8da1c71a8596cc',1,'TEST(EntitiesTests, PlayerWeaponEquipping):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#a282f44f166ec32279acc8ad9f4df0810',1,'TEST(EntitiesTests, PlayerInventoryManagement):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#a37fc3e0cbf0acbee02b05cf8b01d61e7',1,'TEST(EntitiesTests, PlayerLevelUpEdgeCases):&#160;EntitiesTests.cpp'],['../EntitiesTests_8cpp.html#a3865fbed9ce4eaef1a5a0cfbbdc1403e',1,'TEST(EntitiesTests, PlayerInvalidItemIndex):&#160;EntitiesTests.cpp'],['../ItemsTests_8cpp.html#afb7332d294f6bd1b3aa1802d6ed0f653',1,'TEST(ItemsTests, WeaponUsage):&#160;ItemsTests.cpp'],['../ItemsTests_8cpp.html#a3937667328400e31bd76544549ce0721',1,'TEST(ItemsTests, HealthPotionUsage):&#160;ItemsTests.cpp']]],
-  ['that_20we_20using_5',['Resources that we using',['../md_README.html#autotoc_md83',1,'']]],
-  ['their_20fields_6',['Classes and Their Fields',['../md_README.html#autotoc_md85',1,'']]],
-  ['tool_7',['Tool',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html#autotoc_md109',1,'']]],
-  ['tool_20report_3a_20plantuml_8',['UML Tool Report: PlantUML',['../md_uml_2extra_2lab1d-uml-tool-report_2UML__TOOL__REPORT.html',1,'']]],
-  ['travel_20glossary_9',['Travel Glossary',['../md_uml_2extra_2lab1e-travel_2GLOSSARY.html',1,'']]],
-  ['trivial_20methods_10',['Key Non-trivial Methods',['../md_README.html#autotoc_md86',1,'']]]
+  ['level_0',['level',['../classCharacter.html#af15a478fe650b87f59cbe5d071697307',1,'Character']]],
+  ['levelup_1',['levelUp',['../classPlayer.html#a5bda3bad89f797546360636deb154fbb',1,'Player']]],
+  ['license_2',['License',['../md_README.html#autotoc_md96',1,'']]],
+  ['limitations_3',['Known Limitations',['../md_docs_2documentation__en.html#autotoc_md28',1,'']]],
+  ['locationnode_4',['locationnode',['../classLocationNode.html',1,'LocationNode'],['../classLocationNode.html#a0e9490b1974a309308550667d90440ce',1,'LocationNode::LocationNode()'],['../md_docs_2documentation__en.html#autotoc_md8',1,'LocationNode'],['../md_docs_2documentation__ua.html#autotoc_md37',1,'LocationNode']]],
+  ['locationnode_20class_5',['LocationNode Class',['../md_README.html#autotoc_md91',1,'']]],
+  ['locationnode_2ecpp_6',['LocationNode.cpp',['../LocationNode_8cpp.html',1,'']]],
+  ['locationnode_2eh_7',['LocationNode.h',['../LocationNode_8h.html',1,'']]],
+  ['log_8',['log',['../classLogger.html#ac0f4f6c60b1531ba80f3a7086e38e1ed',1,'Logger']]],
+  ['logger_9',['Logger',['../classLogger.html',1,'']]],
+  ['logger_2eh_10',['Logger.h',['../Logger_8h.html',1,'']]],
+  ['logger_5fexample_2ecpp_11',['logger_example.cpp',['../logger__example_8cpp.html',1,'']]]
 ];

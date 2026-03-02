@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['документація_0',['Blazing Darkness - Технічна документація',['../md_docs_2documentation__ua.html',1,'']]]
+  ['звіт_20про_20рефакторинг_0',['Звіт про рефакторинг',['../md_SUMMARY.html',1,'']]]
 ];
